@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 페이지</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'EF_jejudoldam';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #d3d3d3;
+        }
+
+        .whitebox {
+            background-color: #ffffff;
+            color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            font-family: 'Pretendard-Regular';
+        }
+
+        .메뉴 {
+            background-color: #f8f4ee;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .메뉴 .left {
+            font-family: 'EF_jejudoldam';
+        }
+
+        .메뉴 .center {
+            display: flex;
+            justify-self: center;
+            align-items: center;
+            flex-grow: 1;
+            justify-content: center;
+        }
+
+        .메뉴 .right {
+            display: flex;
+            align-items: center;
+            padding: 10px 30px;
+        }
+
+        .메뉴 .center a {
+            margin: 0 25px;
+        }
+
+        .메뉴 .right a {
+            margin-left: 10px;
+        }
+
+        .메뉴 a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        #modal {
+            display: none;
+        }
+
+        .modal-btn {
+            color: rgb(47, 47, 47);
+            display: inline-block;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .dialog {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            background: rgba(177, 177, 177, 0.4);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dialog>.tb {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .dialog>.tb .inner {
+            width: 400px;
+            height: 520px;
+            padding: 40px;
+            background: #fff;
+            border-radius: 5px;
+        }
+
+        .dialog .top {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            justify-content: space-between;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            margin-top: 20px;
+        }
+
+        .dialog .title {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .ct .이메일비번 {
+            margin-top: 70px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .ct .이메일비번 input {
+            height: 30px;
+            width: 400px;
+        }
+
+        .ct .아이디비번 {
+            margin-top: 40px;
+            font-size: 13px;
+            gap: 14px;
+        }
+
+        .ct p {
+            margin-top: 130px;
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: left;
+            margin-top: 10px;
+            justify-content: space-between;
+        }
+
+        .social-login a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #000;
+            width: 130px;
+        }
+
+        input[id="modal"]:checked+.dialog {
+            display: block;
+        }
+
+        .close {
+            font-size: 25px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="whitebox">
+        <a href="#" onclick="return false;">쇼핑몰 오픈</a>
+    </div>
+    <div class="메뉴">
+        <div class="left">
+            <a href="#">감자밭</a>
+        </div>
+        <div class="center">
+            <a href="#" onclick="return false;">Gender</a>
+            <a href="#" onclick="return false;">Style</a>
+            <a href="#" onclick="return false;">Place</a>
+            <a href="#" onclick="return false;">Season</a>
+            <a href="#" onclick="return false;">Info</a>
+        </div>
+        <div class="right">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#"><i class="fa-solid fa-bookmark"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <label for="modal" class="modal-btn"><i class="fa-solid fa-user"></i></label>
+        </div>
+    </div>
+
+    <input type="checkbox" id="modal">
+    <div class="dialog">
+        <div class="tb">
+            <div class="inner">
+                <div class="top">
+                    <div class="title">로그인</div>
+                    <label for="modal" class="close">&times;</label>
+                </div>
+                <div class="ct">
+                    <div class="이메일비번">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <div class="아이디비번">
+                        <a href="#">아이디 찾기</a>
+                        <a href="#">비밀번호 찾기</a>
+                    </div>
+                    <p>SNS 계정을 연동해 간편하게 로그인해보세요</p>
+                    <div class="social-login">
+                        <a href="#"><i class="fa-solid fa-comment">카카오톡</i></a>
+                        <a href="#"><i class="fa-brands fa-google">구글</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
