@@ -1,43 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
-
 body{
-    font-family: Arial,sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #757575;
     margin: 0;
-    padding: 0;
-    background-color: darkgrey;
 }
 
 header{
     background-color: #f8f5f0;
     margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5% 5%;
+}
+
+.top_banner{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #E9D09D;
     padding: 0;
-    text-align: center;
-}
-
-
-.top-banner{
-    background-color: #ffffff;
-    padding: 5%;
-    text-align: center;
-}
-
-.box{
-    width: 100%;
-    height: 50%;
-    background: #FFFFFF;
 }
 
 .logo{
-    position: absolute;
-    font-family: 'Gamja Flower',Arial;
-    font-size: 250%;
-    line-height: 150%;
-    text-align: left;
-    width: 15vw;
-    margin-left: 5%;
-    margin-top: 0.5%;
+    font-family: 'Gamja Flower', Arial;
+    font-size: 220%;
     color: #46494F;
-    display:block;
+    box-sizing: border-box;
+    margin: 0;
+    width: 10%;
 }
 
 .logo a{
@@ -45,29 +36,31 @@ header{
     color: #333;
 }
 
-.menu{
+.menu-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    list-style-type: none;
-    margin: 0% 5%;
-    margin-left: 12%;
-    padding: 1% 0;
-    background-color: white;
     width: 100%;
 }
 
-.menu li{
+.menu{
+    list-style-type: none;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
     margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    padding: 1rem;
     position: relative;
-    overflow-x:hidden;
 }
 
 .menu a{
     text-decoration: none;
     color: #333;
-    padding: 10px 20px;
-    display:block;
+    padding: 0.5rem 1rem;
 }
 
 .menu li:hover > a {
@@ -81,15 +74,16 @@ header{
 .submenu{
     display: none;
     position: absolute;
+    text-align: center;
     top: 100%;
     left: 0;
     list-style-type: none;
     background-color: #fff;
-    margin: 0;
-    padding: 0;
-    border: 1px solid #ccc;
-    width: 150%;
     box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 0;
+    margin: 0;
+    width: max-content;
 }
 
 .submenu li {
@@ -97,8 +91,8 @@ header{
 }
 
 .submenu a {
-    padding: 5%;
-
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
 }
 
 .menu li:hover .submenu {
@@ -109,13 +103,10 @@ header{
 .icons{
     display: flex;
     align-items: center;
-    position: relative;
-    margin-left: 20%;
 }
 
 .icons a{
-    margin: 0% 15%;
-    padding: 20%;
-    font-size: 90%;
+    font-size: 100%;
     color: #46494F;
+    padding: 0 1rem;
 }
