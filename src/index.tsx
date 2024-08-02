@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import FrontGender from './FrontGender';
+import FrontGender from './genderpage/FrontGender';
 
 ReactDOM.render(
     <React.StrictMode>

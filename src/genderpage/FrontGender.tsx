@@ -1,7 +1,6 @@
 import React from "react";
-import "./css/FrontGender.css";
-/*import "./css/Product.css";*/
-import {ProductListBottom, ProductListTop} from "./Product";
+import "../css/FrontGender.css";
+import {ProductListBottom, ProductListTop} from "./Product"
 
 function FrontGender(){
     return(
