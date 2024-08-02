@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+body{
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+}
+
+header{
+    background-color: #f8f5f0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5% 5%;
+}
+
+.top_banner{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #E9D09D;
+    padding: 0;
+}
+
+.logo{
+    margin: 0;
+    width: 10%;
+}
+
+.logo img{
+    width: 100%;
+    padding-top: 5%;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu{
+    list-style-type: none;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    padding: 1rem;
+    position: relative;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+}
+
+.menu li:hover > a {
+    color: #E9D09D;
+}
+
+.menu a:hover{
+    background-color: #eee;
+}
+
+.submenu{
+    display: none;
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    left: 0;
+    list-style-type: none;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 0;
+    margin: 0;
+    width: max-content;
+}
+
+.submenu li {
+    margin: 0;
+}
+
+.submenu a {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+}
+
+.menu li:hover .submenu {
+    display: block;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+}
+
+.icons a{
+    font-size: 100%;
+    color: #46494F;
+    padding: 0 1rem;
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+    max-height: 800px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.hero img:empty::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #cccccc; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
