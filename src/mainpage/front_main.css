@@ -7,10 +7,12 @@ body{
 header{
     background-color: #ffffff;
     margin: 0;
+    /*display: flex;*/
     justify-content: space-between;
     align-items: center;
     padding: 0.5% 5%;
 }
+
 .box{
     display: flex;
     flex-direction: row;
@@ -33,6 +35,12 @@ header{
 .logo button{
     width: 80%;
     margin: 50%;
+
+}
+
+.logo img{
+    width: 80%;
+    padding-top: 5%;
 }
 
 .menu-container {
@@ -173,6 +181,80 @@ p{
     overflow: hidden;
 }
 
+.product {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    margin: 2% 10%;
+}
+
+#container2{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+.container_top{
+    display: flex;
+    width: 33%;
+    height: 70vh;
+    margin: 5%;
+    box-sizing: border-box;
+    background-color: #cccccc;
+}
+
+
+.id{
+    display: flex;
+    flex-direction: column;
+    height: 10%;
+    margin-left: 10%;
+}
+
+
+
+#img_1{
+    margin-right: 0;
+}
+#img_2{
+    margin: 3%;
+}
+#img_3{
+    margin-left: 0;
+}
+
+#container3{
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+p{
+    display: block;
+    margin: 5%;
+    font-size: 300%;
+    text-align: center;
+    align-items: center;
+}
+
+.container_bottom{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 70vh;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
 .product{
     display: flex;
     flex-direction: column;
@@ -185,9 +267,7 @@ p{
 .id{
     display: flex;
     flex-direction: column;
-    height: 10%;
+    height: 20%;
     margin-left: 10%;
 }
-
-
 
