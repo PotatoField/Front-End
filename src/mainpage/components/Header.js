@@ -1,18 +1,18 @@
 import React from 'react';
-import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css';
-import 'https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap';
+import '../front_main.css';
+import { FaSearch, FaUser, FaBookmark, FaShoppingCart } from "react-icons/fa";
 
-console.log('Header component loaded');
-const Header=()=>{
-    return(
+const Header = () => {
+    return (
         <>
             <header className="top_banner">
-                쇼핑몰 새로운 소식
+                쇼핑몰 새로운 소식~~~~
             </header>
             <header className="box">
-                <a href="#">
-                    <img src={`${process.env.PUBLIC_URL}/images/mainlogo.png`} alt="potato" width="90px" className="logo"/>
-                </a>
+                <button className="logo-button" onClick={() => { /* 필요한 동작 */
+                }}>
+                    <p className="logo">로고</p>
+                </button>
                 <nav className="menu-container">
                     <ul className="menu">
                         <li>
@@ -40,10 +40,10 @@ const Header=()=>{
                         </li>
                     </ul>
                     <div className="icons">
-                        <a href="#search"><i className="fa-solid fa-magnifying-glass"></i></a>
-                        <a href="#profile"><i className="fa-solid fa-user"></i></a>
-                        <a href="#wishlist"><i className="fa-solid fa-bookmark"></i></a>
-                        <a href="#cart"><i className="fa-solid fa-shopping-cart"></i></a>
+                        <a href="#search"><FaSearch className="icon"/></a>
+                        <a href="#profile"><FaUser className="icon"/></a>
+                        <a href="#wishlist"><FaBookmark className="icon"/></a>
+                        <a href="#cart"><FaShoppingCart className="icon"/></a>
                     </div>
                 </nav>
             </header>

@@ -11,7 +11,7 @@ ReactDOM.render(
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from '../src/mainpage/App';
+import App from '../src/App';
 
 console.log('Index file loaded');
 
