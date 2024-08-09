@@ -1,4 +1,5 @@
 import React from 'react';
+import '../front_main.css'
 import ImageContainer from './ImageContainer';
 import ProductContainer from './ProductContainer';
 

@@ -1,11 +1,13 @@
 import React from 'react';
-import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Create from './createpage/Create';
-import CreateFinsh from './createpage/CreateFinish';
+import Header from './mainpage/components/Header';
+import Main from './mainpage/components/Main';
 function App() {
   return (
     <>
+    <div className="App">
+        <Header />
+        <Main />
+    </div>
     </>
   );
 }

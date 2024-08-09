@@ -1,24 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-
 body{
-    font-family: lexend, sans-serif;
+    font-family: sans-serif;
     background-color: white;
     margin: 0;
 }
 
 header{
-    background-color: #FFF8EC;
+    background-color: #ffffff;
     margin: 0;
     /*display: flex;*/
     justify-content: space-between;
     align-items: center;
     padding: 0.5% 5%;
 }
+
 .box{
     display: flex;
     flex-direction: row;
 }
+
 .top_banner{
     text-align: center;
     align-items: center;
@@ -30,6 +29,13 @@ header{
 .logo{
     margin: 0;
     flex: 1;
+    align-items: center;
+}
+
+.logo button{
+    width: 80%;
+    margin: 50%;
+
 }
 
 .logo img{
@@ -124,6 +130,64 @@ main{
     background-color: #cccccc;
 }
 
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 5%;
+}
+
+.image-item {
+
+}
+
+.product-container{
+    display: flex;
+    margin: 3%;
+}
+
+.container_top{
+    display: flex;
+    width: 33%;
+    height: 70vh;
+    margin: 5%;
+    box-sizing: border-box;
+    background-color: #cccccc;
+}
+
+#img_1{
+    margin-right: 0;
+}
+#img_2{
+    margin: 5%;
+}
+#img_3{
+    margin-left: 0;
+}
+
+p{
+    display: block;
+    margin: 5%;
+    font-size: 300%;
+    text-align: center;
+    align-items: center;
+}
+
+.container_bottom{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 70vh;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    margin: 2% 10%;
+}
+
 #container2{
     width: 100%;
     height: 90vh;
@@ -143,6 +207,16 @@ main{
     box-sizing: border-box;
     background-color: #cccccc;
 }
+
+
+.id{
+    display: flex;
+    flex-direction: column;
+    height: 10%;
+    margin-left: 10%;
+}
+
+
 
 #img_1{
     margin-right: 0;
@@ -185,25 +259,15 @@ p{
     display: flex;
     flex-direction: column;
     height: 80%;
-    margin: 10%;
-    margin-bottom: 2%;
+    margin: 2% 10%;
     box-sizing: border-box;
     background-color: #cccccc;
 }
+
 .id{
     display: flex;
     flex-direction: column;
     height: 20%;
     margin-left: 10%;
-}
-
-#container4{
-    display: flex;
-    width: 100%;
-    height: 60vh;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    box-sizing: border-box;
 }
 
