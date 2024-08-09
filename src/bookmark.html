@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 북마크</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-bottom: 40%;
+        }
+
+        .container {
+            width: 85%;
+            text-align: center;
+            margin-top: 25%;
+        }
+
+        h1 {
+            margin-bottom: 20%;
+            font-size: 3em; 
+            font-weight: 200;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2%;
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30%;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            padding-bottom: 150%; 
+            background-color: #e0e0e0;
+            margin-bottom: 5%;
+        }
+
+        .item-info {
+            width: 100%;
+            text-align: left;
+        }
+
+        .item-info p {
+            margin: 0 0 10% 0;
+        }
+
+        .item-info select,
+        .item-info button {
+            width: 100%;
+            padding: 5%;
+            margin-bottom: 5%;
+            border: 1px solid #ddd;
+            background-color: white;
+            font-size: 14px; 
+            line-height: 1.5; 
+        }
+
+        .item-info select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAYKADAAQAAAABAAAAYAAAAACpM19OAAABZklEQVR4Ae3ZzUlDQRiG0blYUcACLEVcpQtjF67EUlKAoB0lzF5k1JuZ94MzcHfze57lbc0gQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQKCawDb7wo9Px9Nla8+zzx05b7u0l/e319PI3L3m3O210eg+X58f58PhfmtbexhdM2PeCvz+rukB+qFpEVbhLwuQFGEl/tIACRFW4y8PsDJCAn5EgBURUvBjAsyMkIQfFWBGhDT8uAC3jJCIHxngFhFS8WMD7BkhGT86wB4R0vHjA/wnQgX8EgH+EqEKfpkAv4lQCb9UgJEI1fDLBfgpQkX8kgG+i1AVv7+l9Oi/N/tX+hEuT4AAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQJlBa5uD5fgrR307gAAAABJRU5ErkJggg==') no-repeat;
+            background-position: calc(100% - 0.3rem) center; 
+            background-size: 24px 24px;
+        }
+
+        .item-info button {
+            background-color: #8b6e4c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .item-info button:hover {
+            background-color: #6b4f3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>나의 북마크</h1>
+        <div class="grid-container" id="grid-container">
+            
+        </div>
+    </div>
+
+    <script>
+        const items = [
+            { name: '1번옷', price: '1nnnn원' },
+            { name: '2번옷', price: '2nnnn원' },
+            { name: '옷이름', price: '1nnnn원' },
+            { name: '옷이름', price: '1nnnn원' },
+            { name: '옷이름', price: '1nnnn원' },
+            { name: '옷이름', price: '1nnnn원' },
+            { name: '옷이름', price: '1nnnn원' },
+            { name: '옷이름', price: '1nnnn원' }
+        ];
+
+        const gridContainer = document.getElementById('grid-container');
+
+        items.forEach(item => {
+            const itemHTML = `
+                <div class="item">
+                    <div class="image-placeholder"></div>
+                    <div class="item-info">
+                        <p>${item.name}<br>${item.price}</p>
+                        <select>
+                            <option>사이즈를 선택하세요</option>
+                            <option value="s">S</option>
+                            <option value="m">M</option>
+                            <option value="l">L</option>
+                        </select>
+                        <button>장바구니 담기</button>
+                    </div>
+                </div>
+            `;
+            gridContainer.insertAdjacentHTML('beforeend', itemHTML);
+        });
+    </script>
+</body>
+</html>
+
+

@@ -1,10 +1,10 @@
 /*import React from 'react';
 import ReactDOM from 'react-dom';
-import FrontGender from './genderpage/FrontGender';
+import Create from './createpage/Create';
 
 ReactDOM.render(
     <React.StrictMode>
-      <FrontGender />
+        <Create />
     </React.StrictMode>,
     document.getElementById('root')
 );*/

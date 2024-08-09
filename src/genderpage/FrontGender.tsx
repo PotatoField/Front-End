@@ -24,5 +24,4 @@ function FrontGender(){
         </>
     );
 }
-
 export default FrontGender;
