@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    height: 10vh;
+    margin: 15% 25% 100% 25%;
+    border: 1.5px solid gray;
+    border-radius: 5px;
+}
+
+.search_bar{
+    width: 43vw;
+    height: 8vh;
+    border: none;
+    font-size: 16px;
+}
+.search_btn{
+    float: right;
+    background-color: #FFF8EC;
+    border: none;
+    color: black;
+    padding: 1.5%;
+    font-size: 18px;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 5px;
+}
