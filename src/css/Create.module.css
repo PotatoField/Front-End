@@ -43,7 +43,7 @@ p {
     background-color: darkgray;
 }
 
-.form-group {
+.form_group {
     display: flex;
     align-items: center;
     margin: 10px 0 10px 0;
@@ -127,7 +127,18 @@ input {
 }
 
 footer{
+    display: flex;
+    justify-content: center;
+}
+
+#create_btn{
+    font-family: 'Pretendard-400';
+    font-size: 15px;
+    width: 30vw;
+    height: 10vh;
+    background-color: #8A6F4B;
+    color: white;
+    border: none;
     margin-top: 5%;
-    border: 1px solid black;
-    padding: 2%;
+    margin-bottom: 30%;
 }

@@ -11,13 +11,11 @@ ReactDOM.render(
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from '../src/mainpage/App';
-
-console.log('Index file loaded');
+import Create from './createpage/Create';
 
 ReactDOM.render(
     <React.StrictMode>
-        <App />
+        <Create></Create>
     </React.StrictMode>,
     document.getElementById('root')
 );

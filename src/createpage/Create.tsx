@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/Create.css";
+import create from "../css/Create.module.css";
 import FormGroup from "./FormGroup";
 import Term from "./Term";
 
@@ -9,21 +9,21 @@ function Create() {
         <header>
           헤드
         </header>
-        <div id={"container_top"}>
-          <FormGroup label="회원인증" type="text" id="member" />
-          <FormGroup label="이름" type="text" id="name" />
-          <FormGroup label="아이디" type="text" id="username" info="(영문소문자/숫자, 4~16자)" />
-          <FormGroup label="비밀번호" type="password" id="password" info="(영문 대소문자/숫자/특수문자 중 3가지 이상 조합, 8~16자)" />
+        <div id={create.container_top}>
+          <FormGroup label="회원인증" type="text" id={create.member} />
+          <FormGroup label="이름" type="text" id={create.name} />
+          <FormGroup label="아이디" type="text" id={create.username} info="(영문소문자/숫자, 4~16자)" />
+          <FormGroup label="비밀번호" type="password" id={create.password} info="(영문 대소문자/숫자/특수문자 중 3가지 이상 조합, 8~16자)" />
           <FormGroup label="비밀번호 확인" type="password" id="confirm-password" />
           <FormGroup label="전화번호" type="text" id="number" />
           <FormGroup label="이메일" type="text" id="email" />
         </div>
 
-        <div id="container_bottom">
-          <p className="title">전체동의</p>
-          <div id="term1" className="term_top">
-            <input id="checkbox1" className="checkbox" type="checkbox"/>
-            <span className="agree_title">이용약관 및 개인정보수집 및 이용, 쇼핑정보 수신(선택)에 모두 동의합니다.</span>
+        <div id={create.container_bottom}>
+          <p className={create.title}>전체동의</p>
+          <div id={create.term1} className={create.term_top}>
+            <input id={create.checkbox1} className={create.checkbox} type="checkbox"/>
+            <span className={create.agree_title}>이용약관 및 개인정보수집 및 이용, 쇼핑정보 수신(선택)에 모두 동의합니다.</span>
           </div>
           <Term
               title="[필수] 이용약관 동의"
@@ -40,7 +40,7 @@ function Create() {
             </span>
             <br></br><br></br>
             <span>
-              제4조(서비스의 제공 및 변경) ① “몰”은 다음과 같은 업무를 수행합니다.   1. 재화 또는 용역에 대한 정보 제공 및 구매계약의 체결   2. 구매계약이 체결된 재화 또는 용역의 배송   3. 기타 “몰”이 정하는 업무 ② “몰”은 재화 또는 용역의 품절 또는 기술적 사양의 변경 등의 경우에는 장차 체결되는 계약에 의해 제공할 재화 또는 용역의 내용을 변경할 수 있습니다. 이 경우에는 변경된 재화 또는 용역의 내용 및 제공일자를 명시하여 현재의 재화 또는 용역의 내용을 게시한 곳에 즉시 공지합니다. ③ “몰”이 제공하기로 이용자와 계약을 체결한 서비스의 내용을 재화등의 품절 또는 기술적 사양의 변경 등의 사유로 변경할 경우에는 그 사유를 이용자에게 통지 가능한 주소로 즉시 통지합니다. ④ 전항의 경우 “몰”은 이로 인하여 이용자가 입은 손해를 배상합니다. 다만, “몰”이 고의 또는 과실이 없음을 입증하는 경우에는 그러하지 아니합니다.
+              제4조(서비스의 제공 및 변경) ① “몰”은 다음과 같은 업무를 수행합니다. 1. 재화 또는 용역에 대한 정보 제공 및 구매계약의 체결   2. 구매계약이 체결된 재화 또는 용역의 배송   3. 기타 “몰”이 정하는 업무 ② “몰”은 재화 또는 용역의 품절 또는 기술적 사양의 변경 등의 경우에는 장차 체결되는 계약에 의해 제공할 재화 또는 용역의 내용을 변경할 수 있습니다. 이 경우에는 변경된 재화 또는 용역의 내용 및 제공일자를 명시하여 현재의 재화 또는 용역의 내용을 게시한 곳에 즉시 공지합니다. ③ “몰”이 제공하기로 이용자와 계약을 체결한 서비스의 내용을 재화등의 품절 또는 기술적 사양의 변경 등의 사유로 변경할 경우에는 그 사유를 이용자에게 통지 가능한 주소로 즉시 통지합니다. ④ 전항의 경우 “몰”은 이로 인하여 이용자가 입은 손해를 배상합니다. 다만, “몰”이 고의 또는 과실이 없음을 입증하는 경우에는 그러하지 아니합니다.
             </span>
             <br></br><br></br>
             <span>
@@ -112,7 +112,7 @@ function Create() {
 
         </div>
         <footer>
-          footer
+          <button id={create.create_btn}>회원가입</button>
         </footer>
       </>
   );
