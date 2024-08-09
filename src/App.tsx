@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './mainpage/components/Header';
 import Main from './mainpage/components/Main';
-
 function App() {
   return (
     <>
