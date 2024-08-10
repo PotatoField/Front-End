@@ -5,39 +5,56 @@
     font-style: normal;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .container {
     font-family: 'Pretendard-400';
-
-    text-align: center;
+    /*text-align: center;*/
     border: 1px solid darkgray;
     width: 70vw;
+    height: 80vh;
+    margin: 15% 15% 100% 15%;
 }
 
 .title {
+    font-family: 'Pretendard-400';
+    text-align: center;
     font-size: 24px;
     font-weight: bold;
-    color: #D98D00; /* 텍스트 색상 (이미지의 색상과 비슷하게 설정) */
-    margin-bottom: 20px;
+    color: #E1A325;
+    margin: 4%;
 }
 
 .info_box {
     border: 1px solid #ccc;
-    padding: 20px;
-    width: 300px;
+    width: 35vw;
     margin: 0 auto;
 }
 
-.info_item {
-    font-size: 16px;
-    margin-bottom: 10px;
+.info_row {
+    font-family: 'Pretendard-400';
+    display: flex;
+    margin: 10%;
 }
 
-.info_item:last-child {
-    margin-bottom: 0;
+.info_item {
+    font-family: 'Pretendard-400';
+    font-size: 13px;
+    width: 20%;
+}
+
+.info_value {
+    font-family: 'Pretendard-400';
+    font-size: 13px;
+    margin-left: 3%;
+}
+
+.btn{
+    font-family: 'Pretendard-400';
+    background-color: #8A6F4B;
+    border: none;
+    color: white;
+    padding: 1.5%;
+    font-size: 15px;
+    width: 20%;
+    cursor: pointer;
+    margin: 4% 40%;
 }

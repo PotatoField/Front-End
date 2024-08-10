@@ -15,7 +15,7 @@
 
 #container_top {
     font-family: 'Pretendard-400';
-    margin: auto 5% auto 5%;
+    margin: 10% 5% auto 5%;
     position: relative;
 }
 
@@ -139,6 +139,6 @@ footer{
     background-color: #8A6F4B;
     color: white;
     border: none;
-    margin-top: 5%;
-    margin-bottom: 30%;
+    margin: 5% 0 30% 0;
+    cursor: pointer;
 }
