@@ -2,13 +2,19 @@ import React from "react";
 import create from "../css/Create.module.css";
 import FormGroup from "./FormGroup";
 import Term from "./Term";
+import Header from "../mainpage/components/Header";
+import { useNavigate } from 'react-router-dom';
 
-function Create() {
+
+const Create: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/create-finish');
+  };
+
   return (
       <>
-        <header>
-          헤드
-        </header>
         <div id={create.container_top}>
           <FormGroup label="회원인증" type="text" id={create.member} />
           <FormGroup label="이름" type="text" id={create.name} />
@@ -112,7 +118,7 @@ function Create() {
 
         </div>
         <footer>
-          <button id={create.create_btn}>회원가입</button>
+          <button id={create.create_btn} onClick={handleClick}>회원가입</button>
         </footer>
       </>
   );

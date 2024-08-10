@@ -1,6 +1,10 @@
 import React from 'react';
+import "../front_main.css";
+
+/*
 import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css';
 import 'https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap';
+*/
 
 console.log('Header component loaded');
 const Header=()=>{
