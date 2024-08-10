@@ -12,6 +12,7 @@ const App: React.FC = () => {
           <Route path="/create-finish" element={<CreateFinsh />} />
         </Routes>
       </Router>
+
   );
 };
 

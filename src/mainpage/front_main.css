@@ -1,34 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
 body{
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
     background-color: white;
     margin: 0;
 }
 
 header{
-    background-color: #f8f5f0;
+    background-color: #ffffff;
     margin: 0;
-    display: flex;
+    /*display: flex;*/
     justify-content: space-between;
     align-items: center;
     padding: 0.5% 5%;
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
 }
 
 .top_banner{
     text-align: center;
     align-items: center;
     justify-content: center;
-    background-color: #E9D09D;
+    background-color: #818181;
     padding: 0;
 }
 
 .logo{
     margin: 0;
-    width: 10%;
+    flex: 1;
+    align-items: center;
+}
+
+.logo button{
+    width: 80%;
+    margin: 50%;
+
 }
 
 .logo img{
-    width: 100%;
+    width: 80%;
     padding-top: 5%;
 }
 
@@ -50,6 +61,7 @@ header{
 
 .menu li{
     padding: 1rem;
+    margin: 0 3%;
     position: relative;
 }
 
@@ -108,28 +120,154 @@ header{
     padding: 0 1rem;
 }
 
-.hero {
+main{
+    background-color: white;
+}
+
+#container1{
     width: 100%;
-    height: auto;
-    max-height: 800px;
+    height: 90vh;
+    background-color: #cccccc;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 5%;
+}
+
+.image-item {
+
+}
+
+.product-container{
+    display: flex;
+    margin: 3%;
+}
+
+.container_top{
+    display: flex;
+    width: 33%;
+    height: 70vh;
+    margin: 5%;
+    box-sizing: border-box;
+    background-color: #cccccc;
+}
+
+#img_1{
+    margin-right: 0;
+}
+#img_2{
+    margin: 5%;
+}
+#img_3{
+    margin-left: 0;
+}
+
+p{
+    display: block;
+    margin: 5%;
+    font-size: 300%;
+    text-align: center;
+    align-items: center;
+}
+
+.container_bottom{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 70vh;
+    box-sizing: border-box;
     overflow: hidden;
-    position: relative;
 }
 
-.hero img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
+.product {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    margin: 2% 10%;
 }
 
-.hero img:empty::after {
-    content: '';
-    display: block;
+#container2{
     width: 100%;
-    height: 100%;
-    background-color: #cccccc; 
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
 }
+
+
+.container_top{
+    display: flex;
+    width: 33%;
+    height: 70vh;
+    margin: 5%;
+    box-sizing: border-box;
+    background-color: #cccccc;
+}
+
+
+.id{
+    display: flex;
+    flex-direction: column;
+    height: 10%;
+    margin-left: 10%;
+}
+
+
+
+#img_1{
+    margin-right: 0;
+}
+#img_2{
+    margin: 3%;
+}
+#img_3{
+    margin-left: 0;
+}
+
+#container3{
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+p{
+    display: block;
+    margin: 5%;
+    font-size: 300%;
+    text-align: center;
+    align-items: center;
+}
+
+.container_bottom{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 70vh;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    margin: 2% 10%;
+    box-sizing: border-box;
+    background-color: #cccccc;
+}
+
+.id{
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+    margin-left: 10%;
+}
+
