@@ -1,8 +1,14 @@
 import React from "react";
 import createfinish from "../css/CreateFinish.module.css";
-import Header from "../mainpage/components/Header";
+import {useNavigate} from 'react-router-dom';
 
-function CreateFinish() {
+const CreateFinish: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/');
+  };
+
   return (
       <>
         <div className={createfinish.container}>
@@ -23,7 +29,7 @@ function CreateFinish() {
               <div className={createfinish.info_value}>이메일</div>
             </div>
           </div>
-            <button className={createfinish.btn}>메인으로</button>
+          <button className={createfinish.btn} onClick={handleClick}>메인으로</button>
         </div>
       </>
   );
