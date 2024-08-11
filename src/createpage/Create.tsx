@@ -2,21 +2,78 @@ import React from "react";
 import create from "../css/Create.module.css";
 import FormGroup from "./FormGroup";
 import Term from "./Term";
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
-function Create() {
+
+const Create: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/create-finish');
+  };
+
+  const [formData, setFormData] = useState({
+    member: '',
+    name: '',
+    username: '',
+    password: '',
+    confirmPassword: '',
+    number: '',
+    email: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (formData.password !== formData.confirmPassword) {
+      alert('비밀번호가 일치하지 않습니다.');
+      return;
+    }
+
+    try {
+      const response = await fetch('https://api.example.com/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        alert('회원가입이 완료되었습니다!');
+        console.log('Response:', data);
+      } else {
+        const errorData = await response.json();
+        console.error('Error:', errorData);
+        alert('회원가입에 실패했습니다.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('서버와의 통신 중 오류가 발생했습니다.');
+    }
+  };
+
+
   return (
       <>
-        <header>
-          헤드
-        </header>
         <div id={create.container_top}>
-          <FormGroup label="회원인증" type="text" id={create.member} />
-          <FormGroup label="이름" type="text" id={create.name} />
-          <FormGroup label="아이디" type="text" id={create.username} info="(영문소문자/숫자, 4~16자)" />
-          <FormGroup label="비밀번호" type="password" id={create.password} info="(영문 대소문자/숫자/특수문자 중 3가지 이상 조합, 8~16자)" />
-          <FormGroup label="비밀번호 확인" type="password" id="confirm-password" />
-          <FormGroup label="전화번호" type="text" id="number" />
-          <FormGroup label="이메일" type="text" id="email" />
+          <p className={create.title}>회원가입</p>
+          <FormGroup label="회원인증" type="text" id={create.member} value={formData.member} onChange={handleChange}/>
+          <FormGroup label="이름" type="text" id={create.name} value={formData.name} onChange={handleChange}/>
+          <FormGroup label="아이디" type="text" id={create.username} value={formData.username} onChange={handleChange} info="(영문소문자/숫자, 4~16자)" />
+          <FormGroup label="비밀번호" type="password" id={create.password} value={formData.password} onChange={handleChange} info="(영문 대소문자/숫자/특수문자 중 3가지 이상 조합, 8~16자)" />
+          <FormGroup label="비밀번호 확인" type="password" value={formData.confirmPassword} onChange={handleChange} id="confirm-password" />
+          <FormGroup label="전화번호" type="text" id="number" value={formData.number} onChange={handleChange} />
+          <FormGroup label="이메일" type="text" id="email" value={formData.email} onChange={handleChange}/>
         </div>
 
         <div id={create.container_bottom}>
@@ -112,7 +169,7 @@ function Create() {
 
         </div>
         <footer>
-          <button id={create.create_btn}>회원가입</button>
+          <button id={create.create_btn} onClick={handleClick}>회원가입</button>
         </footer>
       </>
   );
