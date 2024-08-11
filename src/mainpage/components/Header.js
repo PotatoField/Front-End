@@ -47,7 +47,7 @@ const Header = () => {
             <div className="icons">
               <Link to="/search"><FaSearch className="icon"/></Link>
               <Link to="/create"><FaUser className="icon"/></Link>
-              <a href="#wishlist"><FaBookmark className="icon"/></a>
+              <Link to="/bookmark"><FaBookmark className="icon"/></Link>
               <a href="#cart"><FaShoppingCart className="icon"/></a>
             </div>
           </nav>
