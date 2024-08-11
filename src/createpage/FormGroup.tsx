@@ -6,15 +6,18 @@ interface FormGroupProps {
   label: string;
   type: string;
   id: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   info?: string;
 }
 
-const FormGroup:React.FC<FormGroupProps> = ({ label, type, id, info }) => {
+const FormGroup: React.FC<FormGroupProps> = ({label, type, id, value, onChange, info}) => {
   return (
       <>
         <div className={create.form_group}>
           <label htmlFor={id}>{label}</label>
-          <input type={type} id={id} />
+          <input type={type} id={id} value={value}
+                 onChange={onChange}/>
           {info && <span className={create.info}>{info}</span>}
         </div>
         <div className={create.long_line}></div>
