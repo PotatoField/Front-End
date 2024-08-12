@@ -19,7 +19,6 @@ const App: React.FC = () => {
           <Route path="/bookmark" element={<Bookmark />} />
         </Routes>
       </Router>
-
   );
 };
 

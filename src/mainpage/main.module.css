@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+
+body{
+    font-family: lexend, Noto Sans KR, serif;
+    background-color: white;
+    margin: 0;
+}
+
+header{
+    background-color: white;
+    margin: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    border: 1px solid #818181;
+}
+
+.box{
+    background-color: white;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5% 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.top_banner{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #818181;
+    padding: 0.5%;
+}
+
+.logo{
+    margin: 0;
+    flex: 1;
+}
+
+.logoButton{
+
+}
+
+.menuContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu{
+    list-style-type: none;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    margin: 0 0 0 11%;
+    padding: 0;
+}
+
+.menu li{
+    padding: 1rem;
+    margin: 0 3%;
+    position: relative;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+}
+
+.menu li:hover > a {
+    color: #818181;
+}
+
+.menu a:hover{
+    background-color: #eee;
+}
+
+.submenu{
+    display: none;
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    left: 0;
+    list-style-type: none;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 0;
+    margin: 0;
+    width: max-content;
+}
+
+.submenu li {
+    margin: 0;
+}
+
+.submenu a {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+}
+
+.menu li:hover .submenu {
+    display: block;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+}
+
+.icons a{
+    font-size: 100%;
+    color: #46494F;
+    padding: 0 1rem;
+}
+
+main{
+    background-color: white;
+}
+
+#container1{
+    width: 100%;
+    height: 110vh;
+    background-color: #A4A4A4;
+}
+
+#mainImage{
+    width: 90%;
+    height: 90%;
+    position: relative;
+    left: 5%;
+    top: 30%;
+    border: 10px solid white;
+    box-sizing: border-box;
+    background-color: #D9D9D9;
+}
+
+p{
+    display: block;
+    margin: 25% 0 0 5%;
+    font-size: 200%;
+    text-align: left;
+}
+
+.image_container {
+    display: flex;
+    justify-content: flex-start;
+    margin: 1% 4.5%;
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.container_top{
+    flex: 0 0 30vw;
+    height: 70vh;
+    margin: 0.5%;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.image_box {
+    width: 100%;
+    height: 65vh;
+    background-color: #cccccc;
+    background-size: cover;
+    background-position: center;
+}
+
+.image_id {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+}
+
+#container2{
+    display: flex;
+    margin: 15% 0 10% 0;
+    height: 40%;
+    width: 100%;
+}
+
+#photo1{
+    display: flex;
+    position: relative;
+    left: 10%;
+    flex-direction: row;
+    width: 40%;
+    height: 70vh;
+    box-sizing: border-box;
+    background-color: #9B9B9B;
+}
+
+#photo2{
+    display: flex;
+    position: relative;
+    left: 10%;
+    flex-direction: row;
+    width: 40%;
+    height: 70vh;
+    box-sizing: border-box;
+    background-color: #818181;
+}
+
+#container3{
+    display: flex;
+    margin: 0;
+    width: 100%;
+    height: 30vh;
+}
+
+#photo3{
+    display: flex;
+    position: relative;
+    left: 20%;
+    flex-direction: row;
+    width: 15vw;
+    height: 25vh;
+    background-color: #46494F;
+}
+
+#photo4{
+    display: flex;
+    position: relative;
+    left: 20%;
+    flex-direction: row;
+    width: 15vw;
+    height: 25vh;
+    background-color: #818181;
+}
+#photo5{
+    display: flex;
+    position: relative;
+    left: 20%;
+    flex-direction: row;
+    width: 15vw;
+    height: 25vh;
+    background-color: #cccccc;
+}
+
+#photo6{
+    display: flex;
+    position: relative;
+    left: 20%;
+    flex-direction: row;
+    width: 15vw;
+    height: 25vh;
+    background-color: #D9D9D9;
+}
+
+.h1{
+    text-align: center;
+    font-weight: 600;
+    font-family: Noto Sans KR, serif;
+    font-size: 300%;
+    margin: 10% 0 5% 0;
+}
+
+#container4{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    margin-top: 0;
+}
+
+#photo7{
+    background-color: #cccccc;
+    width: 80%;
+    align-items: center;
+    height: 80%;
+    margin: 0 auto;
+}
+
+#container5{
+    display: flex;
+    justify-content: flex-start;
+    margin: 1% 0 1% 4.5%;
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+#post1{
+    height: 30vh;
+    margin: 1%;
+    background-color: #cccccc;
+    background-size: cover;
+    background-position: center;
+    flex: 0 0 60vw;
+}
+
+#post2{
+    height: 30vh;
+    margin: 1%;
+    background-color: #cccccc;
+    background-size: cover;
+    background-position: center;
+    flex: 0 0 60vw;
+}
+
+#post3{
+    height: 30vh;
+    margin: 1%;
+    background-color: #cccccc;
+    background-size: cover;
+    background-position: center;
+    flex: 0 0 60vw;
+}
+
+#b_post{
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: bold;
+    margin: 0 5%;
+}
+
+#container6{
+    display: flex;
+    justify-content: flex-start;
+    margin: 1% 0 30% 4.5%;
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.item{
+    flex: 0 0 20vw;
+    height: 35vh;
+    background-color: #cccccc;
+    margin: 1%;
+}
+
