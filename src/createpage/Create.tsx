@@ -39,7 +39,7 @@ const Create: React.FC = () => {
     }
 
     try {
-      const response = await fetch('https://api.example.com/signup', {
+      const response = await fetch('백엔드 api 주소', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -67,16 +67,16 @@ const Create: React.FC = () => {
       <>
         <div id={create.container_top}>
           <p className={create.title}>회원가입</p>
-          <FormGroup label="회원인증" type="text" id={create.member} value={formData.member} onChange={handleChange}/>
-          <FormGroup label="이름" type="text" id={create.name} value={formData.name} onChange={handleChange}/>
-          <FormGroup label="아이디" type="text" id={create.username} value={formData.username} onChange={handleChange} info="(영문소문자/숫자, 4~16자)" />
-          <FormGroup label="비밀번호" type="password" id={create.password} value={formData.password} onChange={handleChange} info="(영문 대소문자/숫자/특수문자 중 3가지 이상 조합, 8~16자)" />
-          <FormGroup label="비밀번호 확인" type="password" value={formData.confirmPassword} onChange={handleChange} id="confirm-password" />
-          <FormGroup label="전화번호" type="text" id="number" value={formData.number} onChange={handleChange} />
-          <FormGroup label="이메일" type="text" id="email" value={formData.email} onChange={handleChange}/>
+          <FormGroup label="회원인증" type="text" id={"member"} value={formData.member} onChange={handleChange}/>
+          <FormGroup label="이름" type="text" id={"name"} value={formData.name} onChange={handleChange}/>
+          <FormGroup label="아이디" type="text" id={"username"} value={formData.username} onChange={handleChange} info="(영문소문자/숫자, 4~16자)" />
+          <FormGroup label="비밀번호" type="password" id={"password"} value={formData.password} onChange={handleChange} info="(영문 대소문자/숫자/특수문자 중 3가지 이상 조합, 8~16자)" />
+          <FormGroup label="비밀번호 확인" type="password" id={"confirmPassword"} value={formData.confirmPassword} onChange={handleChange}/>
+          <FormGroup label="전화번호" type="text" id={"number"} value={formData.number} onChange={handleChange} />
+          <FormGroup label="이메일" type="text" id={"email"} value={formData.email} onChange={handleChange}/>
         </div>
 
-        <div id={create.container_bottom}>
+        <div id={create.containerbottom}>
           <p className={create.title}>전체동의</p>
           <div id={create.term1} className={create.term_top}>
             <input id={create.checkbox1} className={create.checkbox} type="checkbox"/>
@@ -168,9 +168,9 @@ const Create: React.FC = () => {
           </Term>
 
         </div>
-        <footer>
-          <button id={create.create_btn} onClick={handleClick}>회원가입</button>
-        </footer>
+        <form onSubmit={handleSubmit}>
+          <button id={create.create_btn} /*type={"submit"}*/ onClick={handleClick}>회원가입</button>
+        </form>
       </>
   );
 }

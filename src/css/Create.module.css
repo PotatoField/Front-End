@@ -121,7 +121,7 @@ input {
     align-content: center;
 }
 
-footer{
+form{
     display: flex;
     justify-content: center;
 }
@@ -137,3 +137,4 @@ footer{
     margin: 5% 0 30% 0;
     cursor: pointer;
 }
+
