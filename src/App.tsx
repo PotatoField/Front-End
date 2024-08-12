@@ -8,19 +8,18 @@ import SearchBar from './global_component/SearchBar';
 import Bookmark from './bookmark/BookMark';
 
 const App: React.FC = () => {
-    return (
-        <Router>
-            <Header></Header>
-            <Routes>
-                <Route path="/" element={<Main/>} />
-                <Route path="/create" element={<Create />} />
-                <Route path="/create-finish" element={<CreateFinsh />} />"
-                <Route path="/search" element={<SearchBar />} />
-                <Route path="/bookmark" element={<Bookmark />} />
-            </Routes>
-        </Router>
-
-    );
+  return (
+      <Router>
+        <Header></Header>
+        <Routes>
+          <Route path="/" element={<Main/>} />
+          <Route path="/create" element={<Create />} />
+          <Route path="/create-finish" element={<CreateFinsh />} />"
+          <Route path="/search" element={<SearchBar />} />
+          <Route path="/bookmark" element={<Bookmark />} />
+        </Routes>
+      </Router>
+  );
 };
 
 export default App;
