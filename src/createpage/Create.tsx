@@ -76,7 +76,7 @@ const Create: React.FC = () => {
           <FormGroup label="이메일" type="text" id={"email"} value={formData.email} onChange={handleChange}/>
         </div>
 
-        <div id={create.containerbottom}>
+        <div id={create.container_bottom}>
           <p className={create.title}>전체동의</p>
           <div id={create.term1} className={create.term_top}>
             <input id={create.checkbox1} className={create.checkbox} type="checkbox"/>
