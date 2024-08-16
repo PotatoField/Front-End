@@ -35,7 +35,7 @@ const Create: React.FC = () => {
 
     if (formData.password !== formData.confirmPassword) {
       alert('비밀번호가 일치하지 않습니다.');
-      return;
+      return navigate('/create');
     }
 
     try {
@@ -169,7 +169,7 @@ const Create: React.FC = () => {
 
         </div>
         <form onSubmit={handleSubmit}>
-          <button id={create.create_btn} /*type={"submit"}*/ onClick={handleClick}>회원가입</button>
+          <button id={create.create_btn} type={"submit"} onClick={handleClick}>회원가입</button>
         </form>
       </>
   );

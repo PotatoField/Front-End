@@ -6,6 +6,7 @@ import Header from './mainpage/components/Header';
 import Main from './mainpage/components/Main';
 import SearchBar from './global_component/SearchBar';
 import Bookmark from './bookmark/BookMark';
+import FindId from './find/FindId';
 
 const App: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const App: React.FC = () => {
           <Route path="/create-finish" element={<CreateFinsh />} />"
           <Route path="/search" element={<SearchBar />} />
           <Route path="/bookmark" element={<Bookmark />} />
+          <Route path="/findid" element={<FindId />} />
         </Routes>
       </Router>
   );
