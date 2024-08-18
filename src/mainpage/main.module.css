@@ -33,7 +33,7 @@ header{
     align-items: center;
     justify-content: center;
     background-color: #818181;
-    padding: 0.5%;
+    padding: 5px;
 }
 
 .logo{
@@ -41,9 +41,7 @@ header{
     flex: 1;
 }
 
-.logoButton{
 
-}
 
 .menuContainer {
     display: flex;

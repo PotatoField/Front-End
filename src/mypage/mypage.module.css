@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.notification{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.sidebar{
+    width: 500px;
+    flex-shrink: 0;
+}
+
+.mypageContainer {
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
+.bar{
+    font-family: Pretendard-Regular, serif;
+    width: 250px;
+    height: 150vh;
+    flex-shrink: 0;
+
+}
+
+.logo{
+    margin: 200px 50px 0 50px;
+    height: 40px;
+    text-align: center;
+    align-content: center;
+    background-color: #D9D9D9;
+    font-size: 20px;
+}
+
+.title{
+    margin: 80px 0 40px 0;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+}
+
+.subtitle{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.subtitle a{
+    margin: 30px 0 0 80px;
+    text-decoration: none;
+    list-style-type: none;
+    color: #333;
+}
+
+/*mypageContainer의 css*/
+
+.mypage{
+    margin: 300px 100px;
+    font-family: Pretendard-Regular, sans-serif;
+    width: 1500px;
+    height: 500vh;
+    display: inline-block;
+}
+
+.mypage a{
+    text-decoration: none;
+    list-style-type: none;
+    color: #333;
+}
+
+hr{
+    border-top: 2px solid black;
+    margin: 0;
+    width: 100%;
+}
+
+.pagetitle{
+    font-weight: bold;
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.option{
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    margin: 50px 0;
+}
+
+/*addressBook의 css*/
+.address{
+    display: flex;
+    flex-direction: row;
+}
+
+.pageoption{
+    position: relative;
+    bottom: 10px;
+    font-size: 18px;
+    float: right;
+}
