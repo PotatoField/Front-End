@@ -1,12 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Create from './createpage/Create';
-import CreateFinsh from './createpage/CreateFinish';
+import Create from './account/create/Create';
+import CreateFinsh from './account/create/CreateFinish';
 import Header from './mainpage/components/Header';
 import Main from './mainpage/components/Main';
 import SearchBar from './global_component/SearchBar';
 import Bookmark from './bookmark/BookMark';
 import FindId from './find/FindId';
+import LoginModal from './account/login/LoginModal';
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
           <Route path="/search" element={<SearchBar />} />
           <Route path="/bookmark" element={<Bookmark />} />
           <Route path="/findid" element={<FindId />} />
+          <Route path="/login" element={<LoginModal />} />
         </Routes>
       </Router>
   );
@@ -26,3 +28,15 @@ const App: React.FC = () => {
 
 export default App;
 
+
+/*
+import React from "react";
+import LoginModal from "./account/login/LoginModal";
+
+const App: React.FC = () => {
+  return (
+      <LoginModal></LoginModal>
+  );
+};
+
+export default App;*/

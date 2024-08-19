@@ -1,10 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Main from '../main.module.css';
 import { FaSearch, FaUser, FaHeart, FaShoppingCart } from "react-icons/fa";
 import {Link, useNavigate} from 'react-router-dom';
-
+import LoginModal from '../../account/login/LoginModal';
 
 const Header = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+
   const navigate = useNavigate();
   const handleClick = () => {
     navigate('/');
@@ -47,13 +59,14 @@ const Header = () => {
               </ul>
               <div className={Main.icons}>
                 <Link to="/search"><FaSearch className={Main.icons}/></Link>
-                <Link to="/create"><FaUser className={Main.icons}/></Link>
+                <FaUser className={Main.icons} onClick={openModal}/>
                 <Link to="/bookmark"><FaHeart className={Main.icons}/></Link>
                 <a href="#cart"><FaShoppingCart className={Main.icons}/></a>
               </div>
             </nav>
           </div>
         </header>
+        <LoginModal isModalOpen={isModalOpen} closeModal={closeModal} />
 
       </>
   );
