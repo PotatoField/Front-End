@@ -1,8 +1,6 @@
 import React from 'react';
 import main from '../main.module.css';
 import ImageContainer from './ImageContainer';
-import Footer from './Footer'
-import ProductContainer from './ProductContainer';
 
 console.log('Main component loaded');
 const generateItems = (count,prefix) => {

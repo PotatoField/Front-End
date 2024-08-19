@@ -67,7 +67,6 @@ const Header = () => {
           </div>
         </header>
         <LoginModal isModalOpen={isModalOpen} closeModal={closeModal} />
-
       </>
   );
 };
