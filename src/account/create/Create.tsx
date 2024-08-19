@@ -1,5 +1,5 @@
 import React from "react";
-import create from "../css/Create.module.css";
+import create from "../../css/Create.module.css";
 import FormGroup from "./FormGroup";
 import Term from "./Term";
 import { useNavigate } from 'react-router-dom';
@@ -14,9 +14,8 @@ const Create: React.FC = () => {
   };
 
   const [formData, setFormData] = useState({
-    member: '',
     name: '',
-    username: '',
+    userID: '',
     password: '',
     confirmPassword: '',
     number: '',
@@ -39,7 +38,7 @@ const Create: React.FC = () => {
     }
 
     try {
-      const response = await fetch('백엔드 api 주소', {
+      const response = await fetch('172.30.1.16/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -67,9 +66,9 @@ const Create: React.FC = () => {
       <>
         <div id={create.container_top}>
           <p className={create.title}>회원가입</p>
-          <FormGroup label="회원인증" type="text" id={"member"} value={formData.member} onChange={handleChange}/>
+          <FormGroup label="회원인증" type="text" id={"member"} onChange={handleChange}/>
           <FormGroup label="이름" type="text" id={"name"} value={formData.name} onChange={handleChange}/>
-          <FormGroup label="아이디" type="text" id={"username"} value={formData.username} onChange={handleChange} info="(영문소문자/숫자, 4~16자)" />
+          <FormGroup label="아이디" type="text" id={"userID"} value={formData.userID} onChange={handleChange} info="(영문소문자/숫자, 4~16자)" />
           <FormGroup label="비밀번호" type="password" id={"password"} value={formData.password} onChange={handleChange} info="(영문 대소문자/숫자/특수문자 중 3가지 이상 조합, 8~16자)" />
           <FormGroup label="비밀번호 확인" type="password" id={"confirmPassword"} value={formData.confirmPassword} onChange={handleChange}/>
           <FormGroup label="전화번호" type="text" id={"number"} value={formData.number} onChange={handleChange} />

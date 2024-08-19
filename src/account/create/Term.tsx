@@ -1,6 +1,6 @@
 // ConsentSection.tsx
 import React from 'react';
-import create from "../css/Create.module.css";
+import create from "../../css/Create.module.css";
 
 interface TermProps {
   title: string;

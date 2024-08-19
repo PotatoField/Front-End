@@ -1,5 +1,5 @@
 import React from "react";
-import createfinish from "../css/CreateFinish.module.css";
+import createfinish from "../../css/CreateFinish.module.css";
 import {useNavigate} from 'react-router-dom';
 
 const CreateFinish: React.FC = () => {
