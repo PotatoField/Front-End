@@ -1,12 +1,12 @@
 // FormGroup.js 또는 FormGroup.tsx
 import React from 'react';
-import create from "../css/Create.module.css";
+import create from "../../css/Create.module.css";
 
 interface FormGroupProps {
   label: string;
   type: string;
   id: string;
-  value: string;
+  value?: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   info?: string;
 }
@@ -15,8 +15,8 @@ const FormGroup: React.FC<FormGroupProps> = ({label, type, id, value, onChange, 
   return (
       <>
         <div className={create.form_group}>
-          <label htmlFor={id}>{label}</label>
-          <input type={type} id={id} value={value}
+          <label className={create.label} htmlFor={id}>{label}</label>
+          <input className={create.input}  type={type} id={id} value={value}
                  onChange={onChange}/>
           {info && <span className={create.info}>{info}</span>}
         </div>
