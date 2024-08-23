@@ -7,13 +7,22 @@ import Main from './mainpage/components/Main';
 import SearchBar from './global_component/SearchBar';
 import Bookmark from './bookmark/BookMark';
 import FindId from './find/FindId';
-import LoginModal from './account/login/LoginModal';
+
 
 const App: React.FC = () => {
   return (
       <Router>
         <Header></Header>
         <Routes>
+
+              <Route path="/" element={<Main/>} />
+              <Route path="/create" element={<Create />} />
+              <Route path="/create-finish" element={<CreateFinsh />} />"
+              <Route path="/search" element={<SearchBar />} />
+              <Route path="/bookmark" element={<Bookmark />} />
+              <Route path="/findid" element={<FindId />} />
+                <Route path="/mypage/notification" element={<Notification/>} />
+
           <Route path="/" element={<Main/>} />
           <Route path="/create" element={<Create />} />
           <Route path="/create-finish" element={<CreateFinsh />} />"
@@ -21,6 +30,7 @@ const App: React.FC = () => {
           <Route path="/bookmark" element={<Bookmark />} />
           <Route path="/findid" element={<FindId />} />
           <Route path="/login" element={<LoginModal />} />
+
         </Routes>
       </Router>
   );
