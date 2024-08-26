@@ -1,16 +1,24 @@
 import React from "react";
 import sidebar from './mypage.module.css'
+import {Link, useNavigate} from "react-router-dom";
 
 const Sidebar = () => {
+
+
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate('/');
+    };
+
     return(
         <div className={sidebar.bar}>
-            <div className={sidebar.logo}>로고</div>
+            <div className={sidebar.logo} onClick={handleClick}>로고</div>
             <div className={sidebar.title}>마이 페이지</div>
             <div className={sidebar.subtitle}>
-                <a href="#login_info">로그인 정보</a>
-                <a href="#profile_edit">프로필 관리</a>
-                <a href="#address">주소록</a>
-                <a href="/mypage/notification">알림</a>
+                <Link to="/mypage/loginInfo">로그인 정보</Link>
+                <Link to="/mypage/profileEdit">프로필 관리</Link>
+                <Link to="/mypage/addressBook">주소록</Link>
+                <Link to="/mypage/notification">알림</Link>
             </div>
         </div>
     );
