@@ -80,6 +80,7 @@ import Main from '../main.module.css';
 import { FaSearch, FaUser, FaHeart, FaShoppingCart } from "react-icons/fa";
 import {Link, useNavigate} from 'react-router-dom';
 import LoginModal from '../../account/login/LoginModal';
+import Logo from '../../images/Logo.png'
 
 const Header = () => {
 
@@ -106,7 +107,7 @@ const Header = () => {
           </div>
           <div className={Main.box}>
             <button className={Main.logoButton} onClick={handleClick}>
-              <p className={Main.logo}>로고</p>
+              <img src={Logo} alt="Logo"/>
             </button>
             <nav className={Main.menuContainer}>
               <ul className={Main.menu}>

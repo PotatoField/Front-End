@@ -56,7 +56,7 @@
 }
 
 .subtitle a{
-    margin: 30px 0 0 80px;
+    margin: 30px 0 0 70px;
     text-decoration: none;
     list-style-type: none;
     color: #333;
@@ -94,8 +94,60 @@ hr{
     display: flex;
     flex-direction: column;
     font-size: 25px;
-    margin: 50px 0;
+    margin: 50px 0 10px;
 }
+
+.optionContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.toggleSwitch {
+    width: 100px;
+    margin: 50px 50px 0;
+    height: 50px;
+    display: block;
+    position: relative;
+    border-radius: 30px;
+    background-color: #515151;
+    box-shadow: 0 0 16px 3px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.toggleButton {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: white;
+    transition: all 0.2s ease-in;
+}
+
+.toggleSwitch.active {
+    background: white;
+}
+
+.toggleSwitch.active .toggleButton {
+    left: calc(100% - 44px);
+    background-color: #515151;
+}
+
+.toggleSwitch.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.toggleSwitch.disabled .toggleButton {
+    background: #ccc;
+}
+
+
 
 /*addressBook의 css*/
 .address{
@@ -108,4 +160,57 @@ hr{
     bottom: 10px;
     font-size: 18px;
     float: right;
+}
+
+
+/*AccountContainer의 css*/
+.account{
+    margin: 300px 100px;
+    font-family: Pretendard-Regular, sans-serif;
+    width: 1200px;
+    height: 100vh;
+}
+
+.accountarr{
+    display: flex;
+    flex-direction: row;
+}
+
+.field{
+
+}
+
+.fieldtitle{
+    font-weight: bold;
+    font-size: 25px;
+    margin: 50px 10px 50px;
+}
+
+.subinfo{
+    color: #999999;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.label{
+    font-size: 20px;
+}
+
+.value{
+    margin: 20px 0;
+    padding: 10px;
+    border-bottom: 1px solid #999999;
+}
+.labelContainer{
+    color: #999999;
+    margin: 100px 0;
+}
+
+.logoutLabel{
+    margin: 0 10px;
+}
+
+.profile{
+    height: 30vh;
+    border-bottom: 1px solid #999999;
 }
