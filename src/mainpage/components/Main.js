@@ -1,6 +1,7 @@
 import React from 'react';
 import main from '../main.module.css';
 import ImageContainer from './ImageContainer';
+import SearchBar from "../../global_component/SearchBar";
 
 console.log('Main component loaded');
 const generateItems = (count,prefix) => {
@@ -15,44 +16,28 @@ const Main = () => {
         ...item,
         productId: `id_${index + 1}`
     }));
+    const imageData = [
+        { id: '1', url: 'path_to_image1.jpg', hashTags: '#BEST #인기코디', title: '이번주 BEST 코디' },
+        { id: '2', url: 'path_to_image2.jpg', hashTags: '#성수 #00동', title: '이번주 핫플 코디' },
+        { id: '3', url: 'path_to_image3.jpg', hashTags: '#남친룩 #여친룩', title: '데이트룩' },
+        { id: '4', url: 'path_to_image4.jpg', hashTags: '#시험기간 #00생 코디', title: '캠퍼스룩' },
+        { id: '5', url: 'path_to_image5.jpg', hashTags: '#추가 코디', title: '추가된 코디' },
+        { id: '6', url: 'path_to_image6.jpg', hashTags: '#추가 코디 2', title: '또 다른 코디' },
+        { id: '7', url: 'path_to_image7.jpg', hashTags: '#추가 코디 3', title: '마지막 코디' },
+    ];
 
     return(
         <main>
             <div id={main.container1}>
-                <div id={main.mainImage}></div>
+                <div id={main.leftbox}>
+                    <SearchBar/>
+                    <p id={main.logotext}>Write<br/>Your Fashion!</p>
+                </div>
             </div>
-            <p>BEST CODIES</p>
-            <ImageContainer images={images.slice(0,6)}/>
-            <div id={main.container2}>
-                <div id={main.photo1}/>
-                <div id={main.photo2}/>
-            </div>
-            <div id={main.container3}>
-                <div id={main.photo3}/>
-                <div id={main.photo4}/>
-                <div id={main.photo5}/>
-                <div id={main.photo6}/>
-            </div>
-            <h1 className={main.h1}>새로운 소식</h1>
-            <div id={main.container4}>
-                <div id={main.photo7}/>
-            </div>
-            <p id={main.b_post}>인기 게시글</p>
-            <div id={main.container5}>
-                <div id={main.post1}/>
-                <div id={main.post2}/>
-                <div id={main.post3}/>
-            </div>
-            <h1 className={main.h1}>인기있는 아이템</h1>
-            <div id={main.container6}>
-                <div id={main.item1} className={main.item}/>
-                <div id={main.item2} className={main.item}/>
-                <div id={main.item3} className={main.item}/>
-                <div id={main.item4} className={main.item}/>
-                <div id={main.item5} className={main.item}/>
-                <div id={main.item6} className={main.item}/>
-                <div id={main.item7} className={main.item}/>
-                <div id={main.item8} className={main.item}/>
+            <h1 id={main.text1}>카테고리 BEST 코디 구경하기</h1>
+            <ImageContainer images={imageData.slice(0,6)}/>
+            <div>
+                <h1 id={main.text1}>게시글</h1>
             </div>
         </main>
     );
