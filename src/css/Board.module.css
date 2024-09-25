@@ -1,0 +1,146 @@
+@font-face {
+  font-family: 'Pretendard-400';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+    format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.noto-sans-kr {
+  font-family: 'Noto Sans KR', sans-serif;
+  /* font-optical-sizing: auto; */
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* board.tsx */
+#container {
+  margin-top: 20%;
+}
+
+#p {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 30px;
+  color: #593a27;
+  margin-left: 8.942px;
+}
+
+/*grid.tsx*/
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+#row1 {
+  margin-top: 3%;
+}
+#row3 {
+  margin-bottom: 10%;
+}
+.col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55vh;
+  width: 30vw;
+  /* border: 1px solid black; */
+  margin: auto;
+}
+
+/*pagination.tsx*/
+/* .pagination {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.25rem;
+  margin: 20px 0;
+}
+
+.page_item {
+  margin: 0 5px;
+}
+
+.page_item button {
+  color: #f2bea0;
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page_item button:hover {
+  color: #593a27;
+}
+
+.page_item.active button {
+  color: #593a27;
+  cursor: default;
+}
+
+.page_item button:focus {
+  box-shadow: 0 0 0 0.1rem;
+  outline: none;
+}
+
+.sr_only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+} */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.25rem;
+  margin: 20px 0;
+}
+
+.page_item {
+  margin: 0 5px;
+}
+
+.page_item a {
+  color: #f2bea0;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page_item a:hover {
+  color: #593a27;
+}
+
+.page_item.active a {
+  color: #593a27;
+  cursor: default;
+}
+
+.page_item a:focus {
+  box-shadow: 0 0 0 0.1rem;
+  outline: none;
+}
+
+.sr_only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

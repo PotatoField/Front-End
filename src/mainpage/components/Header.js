@@ -74,17 +74,17 @@ const Header = () => {
 
 export default Header;*/
 
-
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Main from '../main.module.css';
 import { FaUser, FaHeart} from "react-icons/fa";
 import { FaRegHeart, FaRegUser } from "react-icons/fa";
 import {Link, useNavigate} from 'react-router-dom';
+import { FaSearch, FaUser, FaHeart, FaShoppingCart } from 'react-icons/fa';
+import { Link, useNavigate } from 'react-router-dom';
 import LoginModal from '../../account/login/LoginModal';
-import Logo from '../../images/Logo.png'
+import Logo from '../../images/Logo.png';
 
 const Header = () => {
-
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -95,12 +95,12 @@ const Header = () => {
     setIsModalOpen(false);
   };
 
-
   const navigate = useNavigate();
   const handleClick = () => {
     navigate('/');
   };
   return (
+
       <>
         <header>
           <div className={Main.top_banner}>

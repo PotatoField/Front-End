@@ -42,28 +42,3 @@ const App: React.FC = () => {
 
 export default App;
 
-/*import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Account from "./mypage/Account";
-import Notification from "./mypage/Notification";
-import ProfileEdit from "./mypage/ProfileEdit";
-import AddressBook from "./mypage/AddressBook";
-import Main from "./mainpage/components/Main";
-import Header from "./mainpage/components/Header";
-
-const App: React.FC = () => {
-    return (
-        <Router>
-            <Header />
-            <Routes>
-                <Route path="/" element={<Main/>} />
-                <Route path="/mypage/loginInfo" element={<Account />} />
-                <Route path="/mypage/profileEdit" element={<ProfileEdit />} />
-                <Route path="/mypage/addressBook" element={<AddressBook />} />
-                <Route path="/mypage/notification" element={<Notification />} />
-            </Routes>
-        </Router>
-    );
-};
-
-export default App;*/
