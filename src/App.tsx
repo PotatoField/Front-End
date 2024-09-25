@@ -1,4 +1,4 @@
-/*import React from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Create from './account/create/Create';
 import CreateFinsh from './account/create/CreateFinish';
@@ -40,9 +40,9 @@ const App: React.FC = () => {
   );
 };
 
-export default App;*/
+export default App;
 
-import React from "react";
+/*import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Account from "./mypage/Account";
 import Notification from "./mypage/Notification";
@@ -66,4 +66,4 @@ const App: React.FC = () => {
     );
 };
 
-export default App;
+export default App;*/
