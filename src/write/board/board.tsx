@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import board from '../css/Board.module.css';
+import board from '../../css/Board.module.css';
 import Grid from './grid';
 import Pagination from './pagination';
 
