@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import board from '../css/Board.module.css';
+import board from '../../css/Board.module.css';
 import { Link } from 'react-router-dom';
 
 const Pagination: React.FC = () => {
