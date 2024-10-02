@@ -14,11 +14,6 @@ const generateItems = (count,prefix) => {
 
 const Main = () => {
     const navigate = useNavigate();
-    const images = generateItems(12, 'img');
-    const products = generateItems(8, 'product').map((item,index) => ({
-        ...item,
-        productId: `id_${index + 1}`
-    }));
     const imageData = [
         { id: '1', url: 'path_to_image1.jpg', hashTags: '#BEST #인기코디', title: '이번주 BEST 코디' },
         { id: '2', url: 'path_to_image2.jpg', hashTags: '#성수 #00동', title: '이번주 핫플 코디' },
