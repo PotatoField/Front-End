@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import post from '../../css/Post.module.css';
 
-const CreatePost: React.FC = () => {
+const PostImage: React.FC = () => {
   const [images, setImages] = useState<File[]>([]);
   const [title, setTitle] = useState<string>('');
   const [content, setContent] = useState<string>('');
@@ -25,30 +25,23 @@ const CreatePost: React.FC = () => {
     setImages(updatedImages);
   };
 
-  const handleSaveDraft = () => {
-    // Logic to save the draft
-    console.log('Draft saved', { images, title, content });
-  };
+  // const handleSaveDraft = () => {
+  //   console.log('Draft saved', { images, title, content });
+  // };
 
-  const handleSavePost = () => {
-    // Logic to save the post
-    console.log('Post saved', { images, title, content });
-  };
+  // const handleSavePost = () => {
+  //   console.log('Post saved', { images, title, content });
+  // };
 
   return (
     <div className={`container mt-5 ${post.createPostContainer}`}>
-      <h2 className={post.title}>코디 정보</h2>
-      <div className={post.line}></div>
       <div className="form-group mt-4">
-        <label htmlFor="imageUpload" className={post.label}>
-          사진 첨부
-        </label>
         <button
           type="button"
           className={post.uploadButton}
           onClick={() => document.getElementById('imageUpload')?.click()}
         >
-          사진 선택
+          이미지 선택 영역
         </button>
         <input
           type="file"
@@ -77,7 +70,7 @@ const CreatePost: React.FC = () => {
           ))}
         </div>
       </div>
-
+      {/* 
       <div className="form-group mt-4">
         <label htmlFor="postTitle" className={post.label}>
           제목
@@ -111,9 +104,9 @@ const CreatePost: React.FC = () => {
         <button className={post.button_post} onClick={handleSavePost}>
           글쓰기
         </button>
-      </div>
+      </div>*/}
     </div>
   );
 };
 
-export default CreatePost;
+export default PostImage;

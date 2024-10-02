@@ -9,18 +9,15 @@ import Like from './like/Like';
 import FindId from './find/FindId';
 import FindPW from './find/FindPW';
 import LoginModal from './account/login/LoginModal';
-import Account from "./mypage/Account";
-import ProfileEdit from "./mypage/ProfileEdit";
-import AddressBook from "./mypage/AddressBook";
-import Notification from "./mypage/Notification";
-import Tag from "./postpage/tag";
-import Post from "./postpage/post";
+import Tag from './postpage/tag';
+import Post from './postpage/post';
 import Account from './mypage/Account';
 import ProfileEdit from './mypage/ProfileEdit';
 import AddressBook from './mypage/AddressBook';
 import Notification from './mypage/Notification';
 import Board from './write/board/board';
-import Post from './write/post/post';
+
+import CreatePost from './write/post/postimage';
 
 const App: React.FC = () => {
   return (
@@ -40,8 +37,9 @@ const App: React.FC = () => {
         <Route path="/mypage/addressBook" element={<AddressBook />} />
         <Route path="/mypage/notification" element={<Notification />} />
         <Route path="/page/:pageNumber" element={<Board />} />
-        <Route path="/post" element={<Post />} />
+        <Route path="/createpost" element={<Post />} />
         <Route path="/post/tag" element={<Tag />} />
+        <Route path="/test" element={<CreatePost />} />
       </Routes>
     </Router>
   );
