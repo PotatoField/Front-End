@@ -46,6 +46,13 @@
   border: 1px solid rgb(61, 61, 61);
   font-size: 12px;
   padding: 0.2em 0.4em;
+
+  /* width: 200px;
+  height: 200px;
+  background-color: #bebebe;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 
 #postTitle {

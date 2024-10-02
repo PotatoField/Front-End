@@ -1,9 +1,8 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Modal from "../../css/LoginModal.module.css";
+import Modal from '../../css/LoginModal.module.css';
 
-const LoginModal = ({ isModalOpen, closeModal }:any) => {
-
+const LoginModal = ({ isModalOpen, closeModal }: any) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -42,23 +41,47 @@ const LoginModal = ({ isModalOpen, closeModal }:any) => {
   if (!isModalOpen) return null; // 모달이 열리지 않으면 아무것도 렌더링하지 않음
 
   return (
-      <div className={Modal.modal}>
-        <div className={Modal.modal_content}>
-          <h1 className={Modal.title}>로그인</h1>
-          <span className={Modal.close_button} onClick={closeModal}>&times;</span>
-          <div className={Modal.long_line}></div>
-          <input className={Modal.email} placeholder={"Email"}  value={email}
-                 onChange={(e) => setEmail(e.target.value)}></input>
-          <input className={Modal.password} placeholder={"Password"} value={password}
-                 onChange={(e) => setPassword(e.target.value)}></input>
-          <button className={Modal.login_btn} onClick={handleLogin}>로그인</button>
+    <div className={Modal.modal}>
+      <div className={Modal.modal_content}>
+        <h1 className={Modal.title}>로그인</h1>
+        <span className={Modal.close_button} onClick={closeModal}>
+          &times;
+        </span>
+        <div className={Modal.long_line}></div>
+        <input
+          className={Modal.email}
+          placeholder={'Email'}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        ></input>
+        <input
+          className={Modal.password}
+          placeholder={'Password'}
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        ></input>
+        <button className={Modal.login_btn} onClick={handleLogin}>
+          로그인
+        </button>
 
-          {error && <p className={Modal.error}>{error}</p>}
-          <Link to="/findid"><label className={Modal.find_ID} onClick={closeModal}>아이디 찾기</label></Link>
-          <Link to="/findpW"><label className={Modal.find_PW} onClick={closeModal}>비밀번호 찾기</label></Link>
-          <Link to="/create"><label className={Modal.create} onClick={closeModal}>회원가입</label></Link>
-        </div>
+        {error && <p className={Modal.error}>{error}</p>}
+        <Link to="/findid">
+          <label className={Modal.find_ID} onClick={closeModal}>
+            아이디 찾기
+          </label>
+        </Link>
+        <Link to="/findpW">
+          <label className={Modal.find_PW} onClick={closeModal}>
+            비밀번호 찾기
+          </label>
+        </Link>
+        <Link to="/create">
+          <label className={Modal.create} onClick={closeModal}>
+            회원가입
+          </label>
+        </Link>
       </div>
+    </div>
   );
 };
 
