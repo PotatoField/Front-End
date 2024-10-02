@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Main from '../main.module.css';
 import { FaRegHeart, FaRegUser } from "react-icons/fa";
 import {Link, useNavigate} from 'react-router-dom';
+import { FaRegHeart, FaRegUser } from 'react-icons/fa';
+import { Link, useNavigate } from 'react-router-dom';
 import LoginModal from '../../account/login/LoginModal';
 import Logo from '../../images/Logo.png';
 import SearchBar from "../../global_component/SearchBar";
@@ -45,6 +47,7 @@ const Header = () => {
         </header>
         <LoginModal isModalOpen={isModalOpen} closeModal={closeModal} />
       </>
+
   );
 };
 
