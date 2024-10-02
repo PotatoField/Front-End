@@ -1,34 +1,93 @@
 import React, { useState } from "react";
 import Header from "../mainpage/components/Header";
-import MypageContainer from "./MypageContainer";
+import post from "../postpage/postpage.module.css";
+import { useNavigate } from "react-router-dom";
 
-const Notification = () => {
-    const [optionTexts, setOptionTexts] = useState([
-        { text: "푸시 알림", link: "#push-notifications", isActive: false },
-        { text: "이메일 알림", link: "#email-notifications", isActive: false }
-    ]);
+const Post = () => {
+    const [title, setTitle] = useState("");
+    const [content, setContent] = useState("");
+    const [tags, setTags] = useState(["", "", "", ""]);
+    const navigate = useNavigate();
 
-    // 토글 상태 변경 함수
-    const onToggleSwitch = (index) => {
-        setOptionTexts((prevState) =>
-            prevState.map((option, idx) =>
-                idx === index ? { ...option, isActive: !option.isActive } : option
-            )
-        );
+    const handleTagChange = (index, value) => {
+        const newTags = [...tags];
+        newTags[index] = value;
+        setTags(newTags);
     };
 
-    return(
+    const handleAddTagClick = () => {
+        navigate("/post/tag");
+    };
+
+    return (
         <>
-            <Header/>
-            <div className={mypage.notification}>
-                <MypageContainer
-                    pageText="알림"
-                    optionTexts={optionTexts}
-                    onToggleSwitch={onToggleSwitch}
-                />
+            <Header />
+            <div className={post.container}>
+                <h1 className={post.title}>코디 정보</h1>
+                <hr className={post.separator} />
+
+                <div className={post.formGroup}>
+                    <label className={post.label}>사진 첨부 (0/12)</label>
+                    <div className={post.imageUpload}>
+                        <div className={post.imageBox}>이미지 업로드 영역</div>
+                    </div>
+                </div>
+
+                <div className={post.relatedTagSection}>
+                    <div className={post.tagBox}>
+                        <span className={post.tagText}>관련 상품 태그<br/><span
+                            className={post.tagSubText}>상품을 태그해 보세요.</span></span>
+
+                        <button className={post.addButton} onClick={handleAddTagClick}>
+                            +
+                        </button>
+                    </div>
+                </div>
+
+                <div className={post.formGroup}>
+                    <label className={post.label}>제목</label>
+                    <input
+                        type="text"
+                        className={post.input}
+                        value={title}
+                        onChange={(e) => setTitle(e.target.value)}
+                        placeholder="제목을 입력하세요"
+                    />
+                </div>
+
+                <div className={post.formGroup}>
+                    <label className={post.label}>본문 입력</label>
+                    <textarea
+                        className={post.textArea}
+                        value={content}
+                        onChange={(e) => setContent(e.target.value)}
+                        placeholder="본문을 입력하세요"
+                    />
+                </div>
+
+                <div className={post.formGroup}>
+                    <label className={post.label}>태그 입력</label>
+                    <div className={post.tagContainer}>
+                        {tags.map((tag, index) => (
+                            <input
+                                key={index}
+                                type="text"
+                                className={post.tagInput}
+                                value={tag}
+                                onChange={(e) => handleTagChange(index, e.target.value)}
+                                placeholder={`#태그 ${index + 1}`}
+                            />
+                        ))}
+                    </div>
+                </div>
+
+                <div className={post.buttonContainer}>
+                    <button className={post.saveButton}>임시저장</button>
+                    <button className={post.submitButton}>글쓰기</button>
+                </div>
             </div>
         </>
     );
-}
+};
 
-export default Notification;
+export default Post;

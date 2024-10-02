@@ -13,15 +13,16 @@ import Account from "./mypage/Account";
 import ProfileEdit from "./mypage/ProfileEdit";
 import AddressBook from "./mypage/AddressBook";
 import Notification from "./mypage/Notification";
+import Tag from "./postpage/tag";
+import Post from "./postpage/post";
 
 
 
 const App: React.FC = () => {
   return (
-      <Router>
+/*      <Router>
         <Header></Header>
         <Routes>
-
           <Route path="/" element={<Main/>} />
           <Route path="/create" element={<Create />} />
           <Route path="/create-finish" element={<CreateFinsh />} />"
@@ -36,7 +37,16 @@ const App: React.FC = () => {
             <Route path="/mypage/addressBook" element={<AddressBook/>}/>
             <Route path="/mypage/notification" element={<Notification/>}/>
         </Routes>
+      </Router>*/
+      <Router>
+          <Header />
+          <Routes>
+              <Route path="/" element={<Main />} />
+              <Route path="/post" element={<Post/>}/>
+              <Route path="/post/tag" element={<Tag />} />
+          </Routes>
       </Router>
+
   );
 };
 

@@ -2,6 +2,8 @@ import React from 'react';
 import main from '../main.module.css';
 import ImageContainer from './ImageContainer';
 import SearchBar from "../../global_component/SearchBar";
+import Grid from "../../write/grid";
+import {useNavigate} from "react-router-dom";
 
 console.log('Main component loaded');
 const generateItems = (count,prefix) => {
@@ -11,6 +13,7 @@ const generateItems = (count,prefix) => {
 };
 
 const Main = () => {
+    const navigate = useNavigate();
     const images = generateItems(12, 'img');
     const products = generateItems(8, 'product').map((item,index) => ({
         ...item,
@@ -25,19 +28,36 @@ const Main = () => {
         { id: '6', url: 'path_to_image6.jpg', hashTags: '#추가 코디 2', title: '또 다른 코디' },
         { id: '7', url: 'path_to_image7.jpg', hashTags: '#추가 코디 3', title: '마지막 코디' },
     ];
+    const handlePostClick = () => {
+        navigate("/post");
+    };
 
     return(
         <main>
             <div id={main.container1}>
                 <div id={main.leftbox}>
-                    <SearchBar/>
-                    <p id={main.logotext}>Write<br/>Your Fashion!</p>
+                    <p id={main.logotext}>
+                        <span id={main.subname}>Fashion</span>
+                        <span id={main.name}>GAMJABATS!</span><br/>
+                        <span id={main.intro}>
+        Ready to refresh your wardrobe? The latest styles harvested from
+        Gamjabat are here! Trendsetters, it's time to make your move!
+      </span>
+                    </p>
+                    <button id={main.writeButton} onClick={handlePostClick}>
+                        ✏ write
+                    </button>
+                </div>
+
+                <div id={main.rightbox}>
                 </div>
             </div>
+
             <h1 id={main.text1}>카테고리 BEST 코디 구경하기</h1>
-            <ImageContainer images={imageData.slice(0,6)}/>
+            <ImageContainer images={imageData.slice(0, 6)}/>
             <div>
                 <h1 id={main.text1}>게시글</h1>
+                <Grid/>
             </div>
         </main>
     );

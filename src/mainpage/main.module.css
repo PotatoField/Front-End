@@ -9,11 +9,11 @@ body{
 }
 
 header{
-    background-color: #593A27;
+    background-color: white;
     margin: 0;
     top: 0;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: fixed;
     z-index: 1;
@@ -21,11 +21,9 @@ header{
 }
 
 .box{
-    background-color: #593A27;
+    background-color: white;
     margin: 0;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5% 5%;
+    padding: 1% 5%;
     display: flex;
     flex-direction: row;
 }
@@ -34,7 +32,9 @@ header{
     text-align: center;
     align-items: center;
     justify-content: center;
-    background-color: #593A27;
+    background-color: #FF6C37;
+    color: white;
+    font-size: 14px;
     padding: 5px;
 }
 
@@ -44,13 +44,20 @@ header{
 }
 
 .logoButton{
-    margin: 0 0 0 45%;
-    width: 9%;
+    margin: 0;
+    width: 12%;
     height: 60px;
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
+}
+
+.searchbox{
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 1000px;
 }
 
 .menuContainer {
@@ -66,7 +73,7 @@ header{
     cursor: pointer;
     margin: 0 20px;
     font-size: 120%;
-    color: #FF6C37;
+    color: black;
     padding: 0 1rem;
 }
 
@@ -78,30 +85,91 @@ main{
     background-color: white;
 }
 
-#leftbox{
-    width: 60%;
-    height: 100%;
-    text-align: center;
+#container1 {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+    background-color: white;
 }
 
-#logotext{
-    font-family: Noto serif,sans-serif;
-    font-weight: bold;
-    font-size: 96px;
-    color: #593A27;
+#leftbox {
+    width: 50%;
+    padding-left: 5%;
     text-align: left;
-    margin: 25% 0 25% 10%;
-
+    display: flex;
+    flex-direction: column;
+    background-color: whitgite;
 }
 
-#container1{
-    width: 100%;
-    height: 70vh;
+#logotext {
+    font-family: 'Noto Serif', sans-serif;
+    font-weight: normal;
+    font-size: 80px;
+    color: #241A13;
+}
+
+#subname {
+    margin-top: 150px;
+    margin-right: 190px;
+    font-size: 80px;
+    display: block;
+    text-align: right;
+}
+
+#name {
+    font-weight: bold;
+    font-size: 80px;
+    margin-left: 20px;
+    margin-bottom: 0;
+    line-height: 0;
+}
+
+#intro {
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+    line-height: 0.5;
+}
+
+#writeButton {
+    background-color: #241A13;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    width: 30%;
+    font-size: 20px;
+    font-family: 'Noto Serif', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#writeButton:hover {
+    background-color: #383020;
+}
+
+#rightbox {
+    width: 40%;
+    height: 60vh;
     background-color: #FF6C37;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
     position: relative;
 }
+
+#image {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 
 #text1{
     text-align: left;
