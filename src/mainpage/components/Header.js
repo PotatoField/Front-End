@@ -33,16 +33,16 @@ const Header = () => {
               <SearchBar />
             </nav>
             <nav className={Main.menuContainer}>
-              <div className={Main.icons}>
-                <FaRegUser className={Main.icons} onClick={openModal} />
-                <Link to="/like">
-                  <FaRegHeart className={Main.icons} />
+              <nav className={Main.menuContainer}>
+                <Link to="/like" className={Main.iconLink}>
+                  <FaRegHeart className={Main.icons}/>
                 </Link>
-              </div>
+                <FaRegUser className={Main.icons} onClick={openModal}/>
+              </nav>
             </nav>
           </div>
         </header>
-        <LoginModal isModalOpen={isModalOpen} closeModal={closeModal} />
+        <LoginModal isModalOpen={isModalOpen} closeModal={closeModal}/>
       </>
   );
 };

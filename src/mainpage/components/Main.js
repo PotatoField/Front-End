@@ -4,6 +4,7 @@ import ImageContainer from './ImageContainer';
 import SearchBar from '../../global_component/SearchBar';
 import Grid from '../../write/board/grid';
 import { useNavigate } from 'react-router-dom';
+import highlightImage from '../../images/main.png';
 
 console.log('Main component loaded');
 const generateItems = (count, prefix) => {
@@ -47,8 +48,8 @@ const Main = () => {
         {
             id: '5',
             url: 'path_to_image5.jpg',
-            hashTags: '#추가 코디',
-            title: '추가된 코디',
+            hashTags: '#오운완 #헬스장',
+            title: '운동룩',
         },
         {
             id: '6',
@@ -74,11 +75,11 @@ const Main = () => {
                     <p id={main.logotext}>
                         <span id={main.subname}>Fashion</span>
                         <span id={main.name}>GAMJABATS!</span>
-                        <br />
+                        <br/>
                         <span id={main.intro}>
-              Ready to refresh your wardrobe? The latest styles harvested from
-              Gamjabat are here! Trendsetters, it's time to make your move!
-            </span>
+                          Ready to refresh your wardrobe? The latest styles harvested from
+                          Gamjabat are here! Trendsetters, it's time to make your move!
+                        </span>
                     </p>
                     <button id={main.writeButton} onClick={handlePostClick}>
                         ✏ write
@@ -87,12 +88,18 @@ const Main = () => {
 
                 <div id={main.rightbox}></div>
             </div>
-
+            <div id={main.imageSection}>
+                <img
+                    src={highlightImage}
+                    alt="Fashion Highlight"
+                    className={main.highlightImage}
+                />
+            </div>
             <h1 id={main.text1}>카테고리 BEST 코디 구경하기</h1>
-            <ImageContainer images={imageData.slice(0, 6)} />
+            <ImageContainer images={imageData.slice(0, 6)}/>
             <div>
                 <h1 id={main.text1}>게시글</h1>
-                <Grid />
+                <Grid/>
             </div>
         </main>
     );
