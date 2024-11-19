@@ -1,119 +1,103 @@
 import React, { useState } from 'react';
-import post from '../../css/Post.module.css';
+import Header from '../mainpage/components/Header';
+import post from '../postpage/postpage.module.css';
+import { useNavigate } from 'react-router-dom';
+import PostImage from '../write/post/postimage';
 
-const CreatePost: React.FC = () => {
-  const [images, setImages] = useState<File[]>([]);
+const Post = () => {
   const [title, setTitle] = useState<string>('');
   const [content, setContent] = useState<string>('');
-
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-      const selectedImages = Array.from(e.target.files);
-      if (selectedImages.length + images.length > 12) {
-        alert('최대 12장의 이미지만 업로드할 수 있습니다.');
-        return;
-      } else if (selectedImages.length < 1) {
-        alert('최소 2장의 이미지를 업로드해야 합니다.');
-        return;
-      }
-      setImages([...images, ...selectedImages]);
-    }
+  const [tags, setTags] = useState(['', '', '', '']);
+  const navigate = useNavigate();
+  const handleTagChange = (index: number, value: string) => {
+    const newTags = [...tags];
+    newTags[index] = value;
+    setTags(newTags);
   };
 
-  const removeImage = (index: number) => {
-    const updatedImages = images.filter((_, i) => i !== index);
-    setImages(updatedImages);
-  };
-
-  const handleSaveDraft = () => {
-    // Logic to save the draft
-    console.log('Draft saved', { images, title, content });
-  };
-
-  const handleSavePost = () => {
-    // Logic to save the post
-    console.log('Post saved', { images, title, content });
+  const handleAddTagClick = () => {
+    navigate('/post/tag');
   };
 
   return (
-    <div className={`container mt-5 ${post.createPostContainer}`}>
-      <h2 className={post.title}>코디 정보</h2>
-      <div className={post.line}></div>
-      <div className="form-group mt-4">
-        <label htmlFor="imageUpload" className={post.label}>
-          사진 첨부
-        </label>
-        <button
-          type="button"
-          className={post.uploadButton}
-          onClick={() => document.getElementById('imageUpload')?.click()}
-        >
-          사진 선택
-        </button>
-        <input
-          type="file"
-          className={post.hiddenInput}
-          id="imageUpload"
-          accept="image/*"
-          multiple
-          onChange={handleImageUpload}
-        />
-        <div className={post.imagePreviewContainer}>
-          {images.map((image, index) => (
-            <div key={index} className={post.imagePreviewWrapper}>
-              <img
-                src={URL.createObjectURL(image)}
-                alt={`Preview ${index + 1}`}
-                className={post.imagePreview}
-              />
-              <button
-                type="button"
-                className={post.removeButton}
-                onClick={() => removeImage(index)}
-              >
-                &times;
+      <>
+        <Header />
+        <div className={post.container}>
+          <h1 className={post.title}>코디 정보</h1>
+          <hr className={post.separator} />
+
+          <div className={post.formGroup}>
+            <label className={post.label}>사진 첨부 (0/12)</label>
+            <PostImage />
+            {/* <div className={post.imageUpload}>
+            <div className={post.imageBox}>
+              <PostImage></PostImage>
+            </div>
+          {/* <div className={post.imageUpload}>
+            <div className={post.imageBox}>
+              <PostImage></PostImage>
+            </div>
+          </div> */}
+          </div>
+
+          <div className={post.relatedTagSection}>
+            <div className={post.tagBox}>
+            <span className={post.tagText}>
+              관련 상품 태그
+              <br />
+              <span className={post.tagSubText}>상품을 태그해 보세요.</span>
+            </span>
+
+              <button className={post.addButton} onClick={handleAddTagClick}>
+                +
               </button>
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
 
-      <div className="form-group mt-4">
-        <label htmlFor="postTitle" className={post.label}>
-          제목
-        </label>
-        <input
-          type="text"
-          className={`form-control ${post.input}`}
-          id="postTitle"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          placeholder="제목을 입력하세요"
-        />
-      </div>
-      <div className="form-group mt-4">
-        <label htmlFor="postContent" className={post.label}>
-          본문 내용
-        </label>
-        <textarea
-          className={`form-control ${post.textarea}`}
-          id="postContent"
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
-          rows={5}
-          placeholder="내용을 입력하세요"
-        />
-      </div>
-      <div className={post.btnContainer}>
-        <button className={post.button_draft} onClick={handleSaveDraft}>
-          임시저장
-        </button>
-        <button className={post.button_post} onClick={handleSavePost}>
-          글쓰기
-        </button>
-      </div>
-    </div>
+          <div className={post.formGroup}>
+            <label className={post.label}>제목</label>
+            <input
+                type="text"
+                className={post.input}
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                placeholder="제목을 입력하세요"
+            />
+          </div>
+
+          <div className={post.formGroup}>
+            <label className={post.label}>본문 입력</label>
+            <textarea
+                className={post.textArea}
+                value={content}
+                onChange={(e) => setContent(e.target.value)}
+                placeholder="본문을 입력하세요"
+            />
+          </div>
+
+          <div className={post.formGroup}>
+            <label className={post.label}>태그 입력</label>
+            <div className={post.tagContainer}>
+              {tags.map((tag, index) => (
+                  <input
+                      key={index}
+                      type="text"
+                      className={post.tagInput}
+                      value={tag}
+                      onChange={(e) => handleTagChange(index, e.target.value)}
+                      placeholder={`#태그 ${index + 1}`}
+                  />
+              ))}
+            </div>
+          </div>
+
+          <div className={post.buttonContainer}>
+            <button className={post.saveButton}>임시저장</button>
+            <button className={post.submitButton}>글쓰기</button>
+          </div>
+        </div>
+      </>
   );
 };
 
-export default CreatePost;
+export default Post;
