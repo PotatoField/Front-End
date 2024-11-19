@@ -21,27 +21,27 @@ import CreatePost from './write/post/postimage';
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <Header></Header>
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/create" element={<Create />} />
-        <Route path="/create-finish" element={<CreateFinsh />} />"
-        <Route path="/search" element={<SearchBar />} />
-        <Route path="/like" element={<Like />} />
-        <Route path="/findid" element={<FindId />} />
-        <Route path="/findpw" element={<FindPW />} />
-        <Route path="/login" element={<LoginModal />} />
-        <Route path="/mypage/loginInfo" element={<Account />} />
-        <Route path="/mypage/profileEdit" element={<ProfileEdit />} />
-        <Route path="/mypage/addressBook" element={<AddressBook />} />
-        <Route path="/mypage/notification" element={<Notification />} />
-        <Route path="/page/:pageNumber" element={<Board />} />
-        <Route path="/createpost" element={<Post />} />
-        <Route path="/post/tag" element={<Tag />} />
-        <Route path="/test" element={<CreatePost />} />
-      </Routes>
-    </Router>
+      <Router>
+        <Header></Header>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/create" element={<Create />} />
+          <Route path="/create-finish" element={<CreateFinsh />} />"
+          <Route path="/search" element={<SearchBar />} />
+          <Route path="/like" element={<Like />} />
+          <Route path="/findid" element={<FindId />} />
+          <Route path="/findpw" element={<FindPW />} />
+          <Route path="/login" element={<LoginModal />} />
+          <Route path="/mypage/loginInfo" element={<Account />} />
+          <Route path="/mypage/profileEdit" element={<ProfileEdit />} />
+          <Route path="/mypage/addressBook" element={<AddressBook />} />
+          <Route path="/mypage/notification" element={<Notification />} />
+          <Route path="/page/:pageNumber" element={<Board />} />
+          <Route path="/createpost" element={<Post />} />
+          <Route path="/post/tag" element={<Tag />} />
+          <Route path="/test" element={<CreatePost />} />
+        </Routes>
+      </Router>
   );
 };
 
