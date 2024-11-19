@@ -16,6 +16,7 @@ import ProfileEdit from './mypage/ProfileEdit';
 import AddressBook from './mypage/AddressBook';
 import Notification from './mypage/Notification';
 import Board from './write/board/board';
+
 import CreatePost from './write/post/postimage';
 
 const App: React.FC = () => {
