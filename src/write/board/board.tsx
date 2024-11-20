@@ -17,7 +17,7 @@ const Board = () => {
   return (
     <>
       <div id={board.container}>
-        <p id={board.p}>Tittle(추후조정)</p>
+        <p id={board.p}>이번주 BEST 코디</p>
         <Grid></Grid>
       </div>
       <div id={board.pagination}>
@@ -26,9 +26,7 @@ const Board = () => {
       <div>
         <TopBtn></TopBtn>
       </div>
-      <div>
-        <LoginModal></LoginModal>
-      </div>
+      <div>{/* <LoginModal></LoginModal> */}</div>
     </>
   );
 };

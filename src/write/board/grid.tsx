@@ -38,8 +38,8 @@ const Grid = () => {
           <ProductCard
             thumbnailUrl="https://via.placeholder.com/150"
             profileImageUrl="https://via.placeholder.com/50"
-            profileName="John Doe"
-            productTitle="Amazing Product"
+            profileName="이름"
+            productTitle="게시글 설명, 작성자가 쓰는 글,이모티콘 등등ㅇㅇㅇㅇㅇ"
           />
         </div>
         <div className={board.col}>Column</div>

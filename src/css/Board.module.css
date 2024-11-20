@@ -15,15 +15,15 @@
 
 /* board.tsx */
 #container {
-  margin-top: 15%;
+  margin-top: 10%;
 }
 
 #p {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 100;
-  font-size: 30px;
-  color: #593a27;
-  margin-left: 4.5%;
+  font-size: 45px;
+  color: #000000;
+  margin-left: 8%;
   margin-bottom: 1.5em;
 }
 
@@ -48,7 +48,8 @@
   height: 55vh;
   width: 25vw;
   /* border: 10px solid black; */
-  margin: auto;
+  margin-left: 8%;
+  /* margin: auto; */
 }
 
 /*pagination.tsx*/
@@ -66,7 +67,7 @@
 }
 
 .page_item a {
-  color: #f2bea0;
+  color: #b3b3b3;
   text-decoration: none;
   padding: 8px 12px;
   border-radius: 4px;
@@ -74,11 +75,11 @@
 }
 
 .page_item a:hover {
-  color: #593a27;
+  color: #ff6c37;
 }
 
 .page_item.active a {
-  color: #593a27;
+  color: #ff6c37;
   cursor: default;
 }
 
@@ -106,13 +107,14 @@
 
 .thumbnailContainer {
   width: 100%;
-  height: 45vh;
+  height: 48vh;
 }
 
 .thumbnail {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 16px;
 }
 
 .contentContainer {
@@ -135,6 +137,7 @@
 }
 
 .profileImage {
+  margin-left: 1%;
   padding-left: 2%;
   width: 3vw;
   height: 3vw;
