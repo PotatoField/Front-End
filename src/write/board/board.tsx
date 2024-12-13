@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import board from '../../css/Board.module.css';
-import Grid from './grid';
-import Pagination from './pagination';
-import TopBtn from '../../global_component/TopBtn';
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import board from "../../css/Board.module.css";
+import Grid from "./grid";
+import Pagination from "./pagination";
+import TopBtn from "../../global_component/TopBtn";
 
-import LoginModal from '../../account/login/LoginModal';
+import LoginModal from "../../account/login/LoginModal";
 
 const Board = () => {
   const { pageNumber } = useParams<{ pageNumber: string }>();
@@ -16,9 +16,11 @@ const Board = () => {
 
   return (
     <>
-      <div id={board.container}>
-        <p id={board.p}>Tittle(추후조정)</p>
-        <Grid></Grid>
+      <div className={board.container}>
+        <div className={board.image_box}>
+          <p className={board.p}>Tittle(추후조정)</p>
+          <Grid></Grid>
+        </div>
       </div>
       <div id={board.pagination}>
         <Pagination></Pagination>
