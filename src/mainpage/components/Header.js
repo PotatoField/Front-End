@@ -22,28 +22,28 @@ const Header = () => {
     navigate('/');
   };
   return (
-    <>
-      <header>
-        <div className={Main.top_banner}>쇼핑몰 새로운 소식~~~~</div>
-        <div className={Main.box}>
-          <button className={Main.logoButton} onClick={handleClick}>
-            <img src={Logo} alt="Logo" />
-          </button>
-          <nav className={Main.searchbox}>
-            <SearchBar />
-          </nav>
-          <nav className={Main.menuContainer}>
-            <div className={Main.icons}>
-              <FaRegUser className={Main.icons} onClick={openModal} />
-              <Link to="/like">
-                <FaRegHeart className={Main.icons} />
-              </Link>
-            </div>
-          </nav>
-        </div>
-      </header>
-      <LoginModal isModalOpen={isModalOpen} closeModal={closeModal} />
-    </>
+      <>
+        <header>
+          <div className={Main.top_banner}>쇼핑몰 새로운 소식~~~~</div>
+          <div className={Main.box}>
+            <button className={Main.logoButton} onClick={handleClick}>
+              <img src={Logo} alt="Logo" />
+            </button>
+            <nav className={Main.searchbox}>
+              <SearchBar />
+            </nav>
+            <nav className={Main.menuContainer}>
+              <nav className={Main.menuContainer}>
+                <Link to="/like" className={Main.iconLink}>
+                  <FaRegHeart className={Main.icons}/>
+                </Link>
+                <FaRegUser className={Main.icons} onClick={openModal}/>
+              </nav>
+            </nav>
+          </div>
+        </header>
+        <LoginModal isModalOpen={isModalOpen} closeModal={closeModal}/>
+      </>
   );
 };
 

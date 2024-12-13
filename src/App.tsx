@@ -16,8 +16,10 @@ import ProfileEdit from './mypage/ProfileEdit';
 import AddressBook from './mypage/AddressBook';
 import Notification from './mypage/Notification';
 import Board from './write/board/board';
-
 import CreatePost from './write/post/postimage';
+import Detail from './write/datail/Detail';
+
+import CardSlider from './write/datail/CardSlider';
 
 const App: React.FC = () => {
   return (
@@ -31,7 +33,7 @@ const App: React.FC = () => {
         <Route path="/like" element={<Like />} />
         <Route path="/findid" element={<FindId />} />
         <Route path="/findpw" element={<FindPW />} />
-        <Route path="/login" element={<LoginModal />} />
+        {/* <Route path="/login" element={<LoginModal />} /> */}
         <Route path="/mypage/loginInfo" element={<Account />} />
         <Route path="/mypage/profileEdit" element={<ProfileEdit />} />
         <Route path="/mypage/addressBook" element={<AddressBook />} />
@@ -40,6 +42,8 @@ const App: React.FC = () => {
         <Route path="/createpost" element={<Post />} />
         <Route path="/post/tag" element={<Tag />} />
         <Route path="/test" element={<CreatePost />} />
+        <Route path="/detail" element={<Detail />} />
+        <Route path="/card" element={<CardSlider />} />
       </Routes>
     </Router>
   );

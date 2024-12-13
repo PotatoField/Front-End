@@ -28,9 +28,7 @@ const Board = () => {
       <div>
         <TopBtn></TopBtn>
       </div>
-      <div>
-        <LoginModal></LoginModal>
-      </div>
+      <div>{/* <LoginModal></LoginModal> */}</div>
     </>
   );
 };

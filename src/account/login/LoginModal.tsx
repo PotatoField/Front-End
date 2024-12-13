@@ -6,11 +6,15 @@ const LoginModal = ({ isModalOpen, closeModal }: any) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = async () => {
+    setIsLoading(true); // 로딩 시작
+    setError(''); // 이전 에러 메시지 초기화
+
     try {
-      const response = await fetch('/api/login', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -21,24 +25,26 @@ const LoginModal = ({ isModalOpen, closeModal }: any) => {
       if (response.ok) {
         const data = await response.json();
 
-        // 예를 들어, JWT 토큰을 로컬 스토리지에 저장
+        // JWT 토큰을 로컬 스토리지에 저장
         localStorage.setItem('token', data.token);
 
-        // 로그인 후 원하는 페이지로 이동 (예: 대시보드)
+        // 로그인 후 원하는 페이지로 이동
         navigate('/');
 
         // 모달 닫기
         closeModal();
+      } else if (response.status === 401) {
+        setError('이메일 또는 비밀번호가 잘못되었습니다.');
       } else {
-        throw new Error('로그인에 실패했습니다.');
+        setError('서버 오류가 발생했습니다. 나중에 다시 시도하세요.');
       }
     } catch (error) {
-      // 에러 처리
-      setError('로그인에 실패했습니다. 이메일과 비밀번호를 확인하세요.');
+      setError('네트워크 오류가 발생했습니다. 인터넷 연결을 확인하세요.');
+    } finally {
+      setIsLoading(false); // 로딩 종료
     }
   };
-
-  if (!isModalOpen) return null; // 모달이 열리지 않으면 아무것도 렌더링하지 않음
+  if (!isModalOpen) return null;
 
   return (
     <div className={Modal.modal}>

@@ -34,43 +34,43 @@ const PostImage: React.FC = () => {
   // };
 
   return (
-    <div className={`container mt-5 ${post.createPostContainer}`}>
-      <div className="form-group mt-4">
-        <button
-          type="button"
-          className={post.uploadButton}
-          onClick={() => document.getElementById('imageUpload')?.click()}
-        >
-          이미지 선택 영역
-        </button>
-        <input
-          type="file"
-          className={post.hiddenInput}
-          id="imageUpload"
-          accept="image/*"
-          multiple
-          onChange={handleImageUpload}
-        />
-        <div className={post.imagePreviewContainer}>
-          {images.map((image, index) => (
-            <div key={index} className={post.imagePreviewWrapper}>
-              <img
-                src={URL.createObjectURL(image)}
-                alt={`Preview ${index + 1}`}
-                className={post.imagePreview}
-              />
-              <button
-                type="button"
-                className={post.removeButton}
-                onClick={() => removeImage(index)}
-              >
-                &times;
-              </button>
-            </div>
-          ))}
+      <div className={`container mt-5 ${post.createPostContainer}`}>
+        <div className="form-group mt-4">
+          <button
+              type="button"
+              className={post.uploadButton}
+              onClick={() => document.getElementById('imageUpload')?.click()}
+          >
+            이미지 선택 영역
+          </button>
+          <input
+              type="file"
+              className={post.hiddenInput}
+              id="imageUpload"
+              accept="image/*"
+              multiple
+              onChange={handleImageUpload}
+          />
+          <div className={post.imagePreviewContainer}>
+            {images.map((image, index) => (
+                <div key={index} className={post.imagePreviewWrapper}>
+                  <img
+                      src={URL.createObjectURL(image)}
+                      alt={`Preview ${index + 1}`}
+                      className={post.imagePreview}
+                  />
+                  <button
+                      type="button"
+                      className={post.removeButton}
+                      onClick={() => removeImage(index)}
+                  >
+                    &times;
+                  </button>
+                </div>
+            ))}
+          </div>
         </div>
-      </div>
-      {/* 
+        {/*
       <div className="form-group mt-4">
         <label htmlFor="postTitle" className={post.label}>
           제목
@@ -105,7 +105,7 @@ const PostImage: React.FC = () => {
           글쓰기
         </button>
       </div>*/}
-    </div>
+      </div>
   );
 };
 
