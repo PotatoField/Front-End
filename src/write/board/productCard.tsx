@@ -1,6 +1,6 @@
-import React from 'react';
-import board from '../../css/Board.module.css';
-import img from '../../images/main1.png';
+import React from "react";
+import board from "../../css/Board.module.css";
+import img from "../../images/main1.png";
 
 interface ProductCardProps {
   thumbnailUrl: string;
@@ -18,7 +18,15 @@ const ProductCard: React.FC<ProductCardProps> = ({
   return (
     <div className={board.card}>
       <div className={board.thumbnailContainer}>
-        <img src={img} className={board.thumbnail} alt="Product Thumbnail" />
+        <img
+          src={img}
+          className={board.thumbnail}
+          alt="Product Thumbnail"
+          style={{
+            maxWidth: "100%",
+            maxHeight: "100%",
+          }}
+        />
       </div>
       <div className={board.contentContainer}>
         <div className={board.profileSection}>

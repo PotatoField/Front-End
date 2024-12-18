@@ -5,8 +5,6 @@ import Grid from "./grid";
 import Pagination from "./pagination";
 import TopBtn from "../../global_component/TopBtn";
 
-import LoginModal from "../../account/login/LoginModal";
-
 const Board = () => {
   const { pageNumber } = useParams<{ pageNumber: string }>();
 

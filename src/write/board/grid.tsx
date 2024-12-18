@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import board from '../../css/Board.module.css';
-import ProductCard from '../board/productCard';
+import React, { useState, useEffect } from "react";
+import board from "../../css/Board.module.css";
+import ProductCard from "../board/productCard";
 const Grid = () => {
   const [productData, setProductData] = useState({
-    thumbnailUrl: '',
-    profileImageUrl: '',
-    profileName: '',
-    productTitle: '',
+    thumbnailUrl: "",
+    profileImageUrl: "",
+    profileName: "",
+    productTitle: "",
   });
 
   useEffect(() => {
     // 백엔드 서버에서 데이터를 가져오는 함수
     const fetchProductData = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/images/upload'); // 여기에 백엔드 API URL을 넣습니다.
+        const response = await fetch("http://localhost:8080/api/images/upload"); // 여기에 백엔드 API URL을 넣습니다.
         const data = await response.json();
 
         // 받아온 데이터를 state에 저장
@@ -24,7 +24,7 @@ const Grid = () => {
           productTitle: data.productTitle,
         });
       } catch (error) {
-        console.error('Failed to fetch product data:', error);
+        console.error("Failed to fetch product data:", error);
       }
     };
 
@@ -39,7 +39,7 @@ const Grid = () => {
             thumbnailUrl="https://via.placeholder.com/150"
             profileImageUrl="https://via.placeholder.com/50"
             profileName="이름"
-            productTitle="게시글 설명, 작성자가 쓰는 글,이모티콘 등등ㅇㅇㅇㅇㅇ"
+            productTitle="게시글 설명"
           />
         </div>
         <div className={board.col}>Column</div>
