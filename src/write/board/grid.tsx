@@ -36,10 +36,10 @@ const Grid = () => {
       <div className={board.row} id={board.row1}>
         <div className={board.col}>
           <ProductCard
-            thumbnailUrl="https://via.placeholder.com/150"
-            profileImageUrl="https://via.placeholder.com/50"
-            profileName="이름"
-            productTitle="게시글 설명"
+            thumbnaiImg={productData.thumbnailUrl}
+            profileImg={productData.profileImageUrl}
+            profileName={productData.profileName}
+            productTitle={productData.productTitle}
           />
         </div>
         <div className={board.col}>Column</div>
