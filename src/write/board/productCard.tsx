@@ -3,15 +3,15 @@ import board from "../../css/Board.module.css";
 import img from "../../images/main1.png";
 
 interface ProductCardProps {
-  thumbnailUrl: string;
-  profileImageUrl: string;
+  thumbnaiImg: string;
+  profileImg: string;
   profileName: string;
   productTitle: string;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({
-  thumbnailUrl,
-  profileImageUrl,
+  thumbnaiImg,
+  profileImg,
   profileName,
   productTitle,
 }) => {
@@ -19,7 +19,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
     <div className={board.card}>
       <div className={board.thumbnailContainer}>
         <img
-          src={img}
+          src={thumbnaiImg || img}
           className={board.thumbnail}
           alt="Product Thumbnail"
           style={{
@@ -32,7 +32,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <div className={board.profileSection}>
           <div className={board.test1}>
             <img
-              src={profileImageUrl}
+              src={profileImg}
               className={board.profileImage}
               alt={profileName}
             />
