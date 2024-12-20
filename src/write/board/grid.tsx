@@ -42,18 +42,74 @@ const Grid = () => {
             productTitle={productData.productTitle}
           />
         </div>
-        <div className={board.col}>Column</div>
-        <div className={board.col}>Column</div>
+        <div className={board.col}>
+          <ProductCard
+            thumbnaiImg={productData.thumbnailUrl}
+            profileImg={productData.profileImageUrl}
+            profileName={productData.profileName}
+            productTitle={productData.productTitle}
+          />
+        </div>
+        <div className={board.col}>
+          <ProductCard
+            thumbnaiImg={productData.thumbnailUrl}
+            profileImg={productData.profileImageUrl}
+            profileName={productData.profileName}
+            productTitle={productData.productTitle}
+          />
+        </div>
       </div>
       <div className={board.row} id={board.row2}>
-        <div className={board.col}>Column</div>
-        <div className={board.col}>Column</div>
-        <div className={board.col}>Column</div>
+        <div className={board.col}>
+          <ProductCard
+            thumbnaiImg={productData.thumbnailUrl}
+            profileImg={productData.profileImageUrl}
+            profileName={productData.profileName}
+            productTitle={productData.productTitle}
+          />
+        </div>
+        <div className={board.col}>
+          <ProductCard
+            thumbnaiImg={productData.thumbnailUrl}
+            profileImg={productData.profileImageUrl}
+            profileName={productData.profileName}
+            productTitle={productData.productTitle}
+          />
+        </div>
+        <div className={board.col}>
+          <ProductCard
+            thumbnaiImg={productData.thumbnailUrl}
+            profileImg={productData.profileImageUrl}
+            profileName={productData.profileName}
+            productTitle={productData.productTitle}
+          />
+        </div>
       </div>
       <div className={board.row} id={board.row3}>
-        <div className={board.col}>Column</div>
-        <div className={board.col}>Column</div>
-        <div className={board.col}>Column</div>
+        <div className={board.col}>
+          <ProductCard
+            thumbnaiImg={productData.thumbnailUrl}
+            profileImg={productData.profileImageUrl}
+            profileName={productData.profileName}
+            productTitle={productData.productTitle}
+          />
+        </div>
+        <div className={board.col}>
+          <ProductCard
+            thumbnaiImg={productData.thumbnailUrl}
+            profileImg={productData.profileImageUrl}
+            profileName={productData.profileName}
+            productTitle={productData.productTitle}
+          />
+        </div>
+        <div className={board.col}>
+          <ProductCard
+            thumbnaiImg={productData.thumbnailUrl}
+            profileImg={productData.profileImageUrl}
+            profileName={productData.profileName}
+            productTitle={productData.productTitle}
+          />
+        </div>
       </div>
     </>
   );

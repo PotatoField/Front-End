@@ -18,6 +18,7 @@
   z-index: 1000;
   backdrop-filter: blur(5px);
   animation: fadeIn 0.3s ease-in-out;
+  top: 0;
 }
 
 .modal_content {
@@ -106,7 +107,6 @@
 .find_ID,
 .find_PW,
 .create {
-  text-decoration-line: none;
   font-family: "Pretendard-400";
   font-size: 14px;
   color: #666;
@@ -144,6 +144,66 @@
   }
   to {
     transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  min-width: 300px;
+  text-align: center;
+  animation: alertSlideDown 0.3s ease-out;
+}
+
+.alert_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+.alert_message {
+  font-family: "Pretendard-400";
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.alert_button {
+  font-family: "Pretendard-400";
+  background: #ff6c37;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s;
+}
+
+.alert_button:hover {
+  transform: translateY(-2px);
+}
+
+@keyframes alertSlideDown {
+  from {
+    transform: translate(-50%, -70%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
     opacity: 1;
   }
 }
