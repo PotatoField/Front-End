@@ -1,139 +1,201 @@
 /* 회원가입 */
 @font-face {
-    font-family: 'Pretendard-100';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
+  font-family: "Pretendard-100";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 100;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Pretendard-400';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Pretendard-400";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
 #container_top {
-    font-family: 'Pretendard-400';
-    margin: 20% 5% auto 5%;
+  font-family: "Pretendard-400";
+  margin: 0 5%;
 }
 
-#container_bottom{
-    margin: 10% 5% auto 5%;
+#container_bottom {
+  margin: 10% 5% auto 5%;
 }
 
 .short_line {
-    width: 65%;
-    height: 1.5px;
-    background-color: darkgray;
+  width: 65%;
+  height: 1.5px;
+  background-color: darkgray;
 }
 
 .long_line {
-    width: 100%;
-    height: 1px;
-    background-color: darkgray;
+  width: 100%;
+  height: 1px;
+  background-color: darkgray;
 }
 
 .form_group {
-    display: flex;
-    align-items: center;
-    margin: 10px 0 10px 0;
+  display: flex;
+  align-items: center;
+  margin: 10px 0 10px 0;
 }
 
 .label {
-    width: 15vw;
-    padding: 0 3% 0 0;
+  width: 15vw;
+  padding: 0 3% 0 0;
 }
 
 .input {
-    margin-right: 2%;
-    padding: 5px;
-    width: 20vw;
+  margin-right: 2%;
+  padding: 5px;
+  width: 20vw;
 }
 
 .info {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 #checkbox1 {
-    width: auto;
-    margin-left: 0;
-    margin-right: 2%;
+  width: auto;
+  margin-left: 0;
+  margin-right: 2%;
 }
 
 .term_top {
-    padding: 2%;
-    border: 1px solid darkgray;
+  padding: 2%;
+  border: 1px solid darkgray;
 }
 
 .term_box {
-    font-family: 'Pretendard-100';
-    font-size: 10px;
-    padding: 2%;
-    border: 1px solid darkgray;
-    overflow: auto;
-    height: 20vh;
-    margin-top: 2%;
-    margin-bottom: 2%;
+  font-family: "Pretendard-100";
+  font-size: 10px;
+  padding: 2%;
+  border: 1px solid darkgray;
+  overflow: auto;
+  height: 20vh;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .term_content {
-    padding: 2%;
-    border: 1px solid darkgray;
-    border-top: none;
-    font-size: 15px;
+  padding: 2%;
+  border: 1px solid darkgray;
+  border-top: none;
+  font-size: 15px;
 }
 
 .checkbox {
-    width: auto;
-    margin-left: 5%;
+  width: auto;
+  margin-left: 5%;
 }
 
 .agree_question {
-    font-family: 'Pretendard-400';
-    font-size: 13px;
-    display: inline-block;
-    width: 27vw;
+  font-family: "Pretendard-400";
+  font-size: 13px;
+  display: inline-block;
+  width: 27vw;
 }
 
-.agree_title{
-    font-family: 'Pretendard-400';
-    font-size: 13px;
-    font-weight: bold;
+.agree_title {
+  font-family: "Pretendard-400";
+  font-size: 13px;
+  font-weight: bold;
 }
-.agree{
-    font-family: 'Pretendard-400';
-    font-size: 13px;
-    align-content: center;
+.agree {
+  font-family: "Pretendard-400";
+  font-size: 13px;
+  align-content: center;
 }
 .title {
-    font-family: 'Pretendard-400';
-    font-size: 20px;
-    font-weight: bold;
-    width: 15%;
-    margin: 3% 0;
-    text-align: left;
+  font-family: "Pretendard-400";
+  font-size: 20px;
+  font-weight: bold;
+  width: 15%;
+  margin-top: 10rem;
+  text-align: left;
 }
 
-.agree_box{
-    display: flex;
-    align-content: center;
+.agree_box {
+  display: flex;
+  align-content: center;
 }
 
-form{
-    display: flex;
-    justify-content: center;
+form {
+  display: flex;
+  justify-content: center;
 }
 
-#create_btn{
-    font-family: 'Pretendard-400';
-    font-size: 15px;
-    width: 30vw;
-    height: 10vh;
-    background-color: #8A6F4B;
-    color: white;
-    border: none;
-    margin: 5% 0 30% 0;
-    cursor: pointer;
+#create_btn {
+  font-family: "Pretendard-400";
+  font-size: 15px;
+  width: 30vw;
+  height: 8vh;
+  background-color: #ff6c37;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  margin: 5% 0;
+  cursor: pointer;
 }
 
+.alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  min-width: 300px;
+  text-align: center;
+  animation: slideDown 0.3s ease-out;
+}
+
+.alert_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  backdrop-filter: blur(2px);
+}
+
+.alert_message {
+  font-family: "Pretendard-400";
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.alert_button {
+  font-family: "Pretendard-400";
+  background: #ff6c37;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s;
+}
+
+.alert_button:hover {
+  transform: translateY(-2px);
+}
+
+@keyframes slideDown {
+  from {
+    transform: translate(-50%, -70%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}

@@ -8,7 +8,6 @@ import SearchBar from "./global_component/SearchBar";
 import Like from "./like/Like";
 import FindId from "./find/FindId";
 import FindPW from "./find/FindPW";
-import LoginModal from "./account/login/LoginModal";
 import Tag from "./postpage/tag";
 import Post from "./postpage/post";
 import Account from "./mypage/Account";

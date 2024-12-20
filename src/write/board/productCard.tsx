@@ -1,6 +1,7 @@
 import React from "react";
 import board from "../../css/Board.module.css";
 import img from "../../images/main1.png";
+import img2 from "../../images/main2.png";
 
 interface ProductCardProps {
   thumbnaiImg: string;
